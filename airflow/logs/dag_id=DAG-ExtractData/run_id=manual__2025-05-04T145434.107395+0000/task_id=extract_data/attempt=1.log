@@ -1,0 +1,35 @@
+{"timestamp":"2025-05-04T14:54:36.499512","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-04T14:54:36.500018","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-04T14:54:36.542302","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-04T14:54:36.839795","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-05-04T14:54:36.916558Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.916949Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.917338Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.945641Z","level":"info","event":"FATIHA","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.946140Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.946474Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.947008Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.947382Z","level":"info","event":"AHMED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.947674Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.948091Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.948406Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.948644Z","level":"info","event":"ASMA","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.948912Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.949253Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.949613Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.949855Z","level":"info","event":"KARIM","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.950397Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.950597Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.950811Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.951005Z","level":"info","event":"HAMLAOUI","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.954904Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.955241Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.955665Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.956009Z","level":"info","event":"NOUFEL","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.963370Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.963778Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.964149Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.964672Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.964993Z","level":"info","event":"nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.965271Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:54:36.964811","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

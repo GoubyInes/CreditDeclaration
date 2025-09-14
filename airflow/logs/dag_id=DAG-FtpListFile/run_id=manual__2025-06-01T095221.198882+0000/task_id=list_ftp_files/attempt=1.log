@@ -1,0 +1,40 @@
+{"timestamp":"2025-06-01T09:52:26.425621","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T09:52:26.427000","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T09:52:26.890551Z","level":"info","event":"File name:  6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:26.891054Z","level":"info","event":"------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:26.923849","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:27.573073","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow.sdk.execution_time.secrets_masker"}
+{"timestamp":"2025-06-01T09:52:27.573240","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-01T09:52:27.573945","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T09:52:27.578168","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:27.798205","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:27.805161","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:27.813164","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:27.813630","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T09:52:27.814335Z","level":"info","event":"Files in server : ['.io', '.mozilla', '.scoadmin.pref', '.ssh', 'CD-ROM_1', 'Disk_A', 'OpenServer', 'bck', 'bin', 'ccs', 'config', 'core.1011', 'dev', 'etc', 'export', 'home', 'home2', 'home21', 'home22', 'home23', 'home31', 'home32', 'install', 'installr', 'lbin', 'lib', 'lost+found', 'mnt', 'opt', 'pmd', 'print', 'proc', 'save', 'sbin', 'secret', 'share', 'shlib', 'stand', 'system', 'tmp', 'u95', 'unix', 'usr', 'var']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:27.816390","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:27.982736","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:27.987753","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:27.993154","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:27.993531","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T09:52:27.996256","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:28.158237","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:28.163150","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:28.367767","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:28.368188","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T09:52:28.371064","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:28.532309","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T09:52:28.537017","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:28.732205","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T09:52:28.732765","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:28.733523Z","level":"info","event":"File saved to /opt/airflow/dags/data/1610528SCL","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.743383Z","level":"info","event":"Cannot connect to beb_ezzouar_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.743508","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:28.751116Z","level":"info","event":"Cannot connect to oran_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.751194","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:28.758564Z","level":"info","event":"Cannot connect to setif_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.758631","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:28.765798Z","level":"info","event":"Cannot connect to constantine_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.765857","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T09:52:28.772774Z","level":"info","event":"Cannot connect to skikda_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T09:52:28.773323","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

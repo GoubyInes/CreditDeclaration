@@ -1,0 +1,6 @@
+{"timestamp":"2025-06-01T13:52:09.831883","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T13:52:09.832651","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T13:52:09.995429Z","level":"info","event":"File name:  1610106","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:52:09.995915Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:52:10.405540Z","level":"info","event":"Directory '010625' already exists.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:52:10.004363","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

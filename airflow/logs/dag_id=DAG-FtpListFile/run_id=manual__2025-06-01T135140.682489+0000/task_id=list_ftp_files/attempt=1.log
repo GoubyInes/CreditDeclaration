@@ -1,0 +1,51 @@
+{"timestamp":"2025-06-01T13:51:44.676339","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T13:51:44.677025","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T13:51:45.023355Z","level":"info","event":"File name:  1610106","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.023816Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.171944Z","level":"info","event":"Server : achour_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.172392Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.034808","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:45.172239","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-01T13:51:45.172501","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T13:51:45.176172","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.359358","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.364596","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.373160","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.373824","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T13:51:45.377764","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.553828","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.560220","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.568058","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.568670","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-06-01T13:51:45.572682","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.747947","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-06-01T13:51:45.753069","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.955143","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-06-01T13:51:45.955667","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:45.956359Z","level":"info","event":"File not found.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.957005Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.957436Z","level":"info","event":"Server : beb_ezzouar_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.957795Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.965495Z","level":"info","event":"Cannot connect to beb_ezzouar_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.965913Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.966254Z","level":"info","event":"Server : oran_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.966876Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.965620","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:45.975132Z","level":"info","event":"Cannot connect to oran_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.975756Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.976841Z","level":"info","event":"Server : setif_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.977863Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.975238","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:45.985511Z","level":"info","event":"Cannot connect to setif_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.985908Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.986206Z","level":"info","event":"Server : constantine_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.988245Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.985610","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:45.995976Z","level":"info","event":"Cannot connect to constantine_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.996965Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.998021Z","level":"info","event":"Server : skikda_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.998524Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:45.996122","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-01T13:51:46.005690Z","level":"info","event":"Cannot connect to skikda_agency","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:46.006164Z","level":"info","event":"----------------------------------------------------------------------------------------","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T13:51:46.006178","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

@@ -1,0 +1,21 @@
+Descriptions : fichier CREM type personnes morales - Dirigeants
+Nom du fichier en sortie : zzzaammCR6 (indice agence + Annee + Mois + CR1)
+
+Code agence              : Z(3)
+Separateur               : |
+Radical client           : Z(6)
+Separateur               : |
+Numero sequentiel        : Z(2)
+Separateur               : |
+identifiant unique       : W(36)   (Cle onomastique / intermidiaire)
+Separateur               : |
+Nom                      : W(50)
+Separateur               : |
+Prenom / Sigle           : W(50)
+Separateur               : |
+Fonction                 : Z(3)  (Voir referentiel B.A : T2156)
+Separateur               : |
+Pays de residence        : Z(3)  (Voir referentiel B.A : TG006)
+Separateur               : |
+Nationalite              : Z(3)  (Voir referentiel B.A : TG006)
+----------------------------------------------------------------------------------------------

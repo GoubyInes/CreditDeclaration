@@ -1,0 +1,106 @@
+h2, h1{
+    color: #ffcc00; /*#ffcc008f;*/
+    font-family:'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-weight: bold;
+}
+h2{
+    margin: 1px !important;
+}
+
+input:hover{
+    border-color: #ffcc00 !important;
+}
+input:active{
+    border-color: #ffcc00 !important;
+}
+input:focus{
+    border-color: #ffcc00 !important;
+}
+
+#crdForm, #clientPage, #agencyPage, #crdTypePage{
+    padding: 5px;
+    border:2px solid #ffcc00;
+    border-radius:10px;
+    background-color:#fdfcfc8f;
+    height: 100%; 
+}
+
+.ant-picker:hover, .ant-select-selector:hover, .ant-input-number:hover, .ant-picker-focused, .ant-input-number-focused, button:focus, button:hover{
+    border-color: #ffcc00 !important;
+}
+.ant-select-focused {
+    border-color: #ffcc00 !important;
+    box-sizing: border-box !important;
+}
+
+label{
+    color: gray;
+}
+
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    color:  #ffcc00 !important;
+}
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-form-item .ant-form-item-label >label {
+    color: gray !important;
+}
+
+.ant-menu-item-selected, .ant-layout-sider-trigger {
+    background-color: #ffcc00 !important;
+}
+
+.ant-menu-item {
+    color: black !important;
+}
+
+.anticon-check-circle, .anticon-close-circle, .anticon-edit, .anticon-delete, .anticon-file-add, .anticon-play-square, .anticon-down-circle{
+    color:  rgb(88, 86, 86) !important;
+    size: 50px;
+} 
+
+.ant-pagination-item, .ant-pagination-item-active, .ant-pagination-item>a{
+    border: 1px solid #ffcc00 !important;
+    color:  #ffcc00 !important;
+}
+
+#crdForm{
+    min-width: 1650px;
+}
+#layout{
+    min-width: 1700px;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-modal .ant-modal-content {
+    width:max-content !important; 
+}
+
+#textField{
+        box-sizing: border-box !important;
+        padding-bottom: 25px;
+        border:none;
+}
+
+.ant-table-thead >tr>th{
+    background-color:rgb(182, 178, 178) !important;
+}
+
+.ant-btn-primary{
+    background-color:  #ffcc00 !important;
+}
+
+.ant-form-item {
+    margin-bottom:10px ;
+}
+
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    border-color: gray !important;
+    background-color: gray !important;
+}
+
+.ant-layout .ant-layout-sider-trigger {
+    position: absolute !important;
+}
+
+.ant-picker-disabled {
+    background-color: white !important; 
+}

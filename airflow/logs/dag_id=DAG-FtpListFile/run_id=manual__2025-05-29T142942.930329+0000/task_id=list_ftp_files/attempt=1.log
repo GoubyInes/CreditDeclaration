@@ -1,0 +1,12 @@
+{"timestamp":"2025-05-29T14:29:57.471614","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-29T14:29:57.490139","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-29T14:29:58.944942","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-29T14:29:59.660683","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-05-29T14:29:59.661173","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-29T14:29:59.670317","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:29:59.906925","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:29:59.914245","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:29:59.923642","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:29:59.925256","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-29T14:29:59.926814Z","level":"info","event":"Fichiers sur le serveur : ['.io', '.mozilla', '.scoadmin.pref', '.ssh', 'CD-ROM_1', 'Disk_A', 'OpenServer', 'bck', 'bin', 'ccs', 'config', 'core.1011', 'dev', 'etc', 'export', 'home', 'home2', 'home21', 'home22', 'home23', 'home31', 'home32', 'install', 'installr', 'lbin', 'lib', 'lost+found', 'mnt', 'opt', 'pmd', 'print', 'proc', 'save', 'sbin', 'secret', 'share', 'shlib', 'stand', 'system', 'tmp', 'u95', 'unix', 'usr', 'var']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-29T14:29:59.927205Z","level":"info","event":"File not found.","chan":"stdout","logger":"task"}

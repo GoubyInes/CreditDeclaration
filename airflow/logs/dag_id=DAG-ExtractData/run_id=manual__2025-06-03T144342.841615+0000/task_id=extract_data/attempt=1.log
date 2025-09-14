@@ -1,0 +1,41 @@
+{"timestamp":"2025-06-03T14:43:45.114568","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-03T14:43:45.115078","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-03T14:43:45.158887","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-03T14:43:45.351178","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-03T14:43:45.405081Z","level":"info","event":"🚫 File not found: 1610306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.405757Z","level":"info","event":"🚫 File not found: 1610306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.406304Z","level":"info","event":"🚫 File not found: 1610306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.406686Z","level":"info","event":"🚫 File not found: 1610306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.407067Z","level":"info","event":"🚫 File not found: 1610306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.407375Z","level":"info","event":"🚫 File not found: 1610306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.407798Z","level":"info","event":"🚫 File not found: 1620306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.408119Z","level":"info","event":"🚫 File not found: 1620306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.408547Z","level":"info","event":"🚫 File not found: 1620306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.408849Z","level":"info","event":"🚫 File not found: 1620306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.409254Z","level":"info","event":"🚫 File not found: 1620306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.409590Z","level":"info","event":"🚫 File not found: 1620306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.410187Z","level":"info","event":"🚫 File not found: 1630306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.410563Z","level":"info","event":"🚫 File not found: 1630306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.411154Z","level":"info","event":"🚫 File not found: 1630306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.411544Z","level":"info","event":"🚫 File not found: 1630306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.411843Z","level":"info","event":"🚫 File not found: 1630306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.412253Z","level":"info","event":"🚫 File not found: 1630306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.412659Z","level":"info","event":"🚫 File not found: 1640306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.412922Z","level":"info","event":"🚫 File not found: 1640306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.413377Z","level":"info","event":"🚫 File not found: 1640306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.414060Z","level":"info","event":"🚫 File not found: 1640306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.414304Z","level":"info","event":"🚫 File not found: 1640306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.414513Z","level":"info","event":"🚫 File not found: 1640306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.425004Z","level":"info","event":"🚫 File not found: 1650306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.426287Z","level":"info","event":"🚫 File not found: 1650306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.426613Z","level":"info","event":"🚫 File not found: 1650306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.426878Z","level":"info","event":"🚫 File not found: 1650306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.427282Z","level":"info","event":"🚫 File not found: 1650306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.427512Z","level":"info","event":"🚫 File not found: 1650306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.427709Z","level":"info","event":"🚫 File not found: 1660306CR1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.428118Z","level":"info","event":"🚫 File not found: 1660306CR2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.428425Z","level":"info","event":"🚫 File not found: 1660306CR3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.428772Z","level":"info","event":"🚫 File not found: 1660306CR4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.429274Z","level":"info","event":"🚫 File not found: 1660306CR5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.429680Z","level":"info","event":"🚫 File not found: 1660306CR6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-03T14:43:45.417695","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

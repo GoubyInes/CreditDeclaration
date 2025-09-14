@@ -1,0 +1,1781 @@
+[
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ActiviteController",
+    "Method": "GetAll",
+    "RelativePath": "api/Activite",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ActiviteController",
+    "Method": "Add",
+    "RelativePath": "api/Activite",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activity",
+        "Type": "CreditDeclaration.Models.Activite",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ActiviteController",
+    "Method": "GetById",
+    "RelativePath": "api/Activite/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ActiviteController",
+    "Method": "Update",
+    "RelativePath": "api/Activite/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "activity",
+        "Type": "CreditDeclaration.Models.Activite",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ActiviteController",
+    "Method": "Delete",
+    "RelativePath": "api/Activite/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.BanqueController",
+    "Method": "GetAll",
+    "RelativePath": "api/Banque",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.BanqueController",
+    "Method": "Add",
+    "RelativePath": "api/Banque",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bank",
+        "Type": "CreditDeclaration.Models.Banque",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.BanqueController",
+    "Method": "GetById",
+    "RelativePath": "api/Banque/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.BanqueController",
+    "Method": "Update",
+    "RelativePath": "api/Banque/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "bank",
+        "Type": "CreditDeclaration.Models.Banque",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.BanqueController",
+    "Method": "Delete",
+    "RelativePath": "api/Banque/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ClasseRetardController",
+    "Method": "GetAll",
+    "RelativePath": "api/ClasseRetard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ClasseRetardController",
+    "Method": "Add",
+    "RelativePath": "api/ClasseRetard",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "delay",
+        "Type": "CreditDeclaration.Models.ClasseRetard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ClasseRetardController",
+    "Method": "GetById",
+    "RelativePath": "api/ClasseRetard/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ClasseRetardController",
+    "Method": "Update",
+    "RelativePath": "api/ClasseRetard/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "delay",
+        "Type": "CreditDeclaration.Models.ClasseRetard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ClasseRetardController",
+    "Method": "Delete",
+    "RelativePath": "api/ClasseRetard/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.CommuneController",
+    "Method": "GetAll",
+    "RelativePath": "api/Commune",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.CommuneController",
+    "Method": "Add",
+    "RelativePath": "api/Commune",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "com",
+        "Type": "CreditDeclaration.Models.Commune",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.CommuneController",
+    "Method": "GetById",
+    "RelativePath": "api/Commune/{id}/{domaine}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "domaine",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.CommuneController",
+    "Method": "Update",
+    "RelativePath": "api/Commune/{id}/{domaine}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "domaine",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "commune",
+        "Type": "CreditDeclaration.Models.Commune",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.CommuneController",
+    "Method": "Delete",
+    "RelativePath": "api/Commune/{id}/{domaine}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "domaine",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.DureeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Duree",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.DureeController",
+    "Method": "Add",
+    "RelativePath": "api/Duree",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "duration",
+        "Type": "CreditDeclaration.Models.DureeCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.DureeController",
+    "Method": "GetById",
+    "RelativePath": "api/Duree/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.DureeController",
+    "Method": "Update",
+    "RelativePath": "api/Duree/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "duration",
+        "Type": "CreditDeclaration.Models.DureeCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.DureeController",
+    "Method": "Delete",
+    "RelativePath": "api/Duree/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EntitePubliqueController",
+    "Method": "GetAll",
+    "RelativePath": "api/EntitePublique",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EntitePubliqueController",
+    "Method": "Add",
+    "RelativePath": "api/EntitePublique",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "CreditDeclaration.Models.EntitePublique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EntitePubliqueController",
+    "Method": "GetById",
+    "RelativePath": "api/EntitePublique/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EntitePubliqueController",
+    "Method": "Update",
+    "RelativePath": "api/EntitePublique/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entity",
+        "Type": "CreditDeclaration.Models.EntitePublique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EntitePubliqueController",
+    "Method": "Delete",
+    "RelativePath": "api/EntitePublique/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EtatCivilController",
+    "Method": "GetAll",
+    "RelativePath": "api/EtatCivil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EtatCivilController",
+    "Method": "Add",
+    "RelativePath": "api/EtatCivil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "CreditDeclaration.Models.EtatCivil",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EtatCivilController",
+    "Method": "GetById",
+    "RelativePath": "api/EtatCivil/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EtatCivilController",
+    "Method": "Update",
+    "RelativePath": "api/EtatCivil/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "duration",
+        "Type": "CreditDeclaration.Models.EtatCivil",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.EtatCivilController",
+    "Method": "Delete",
+    "RelativePath": "api/EtatCivil/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FonctionDirigeantController",
+    "Method": "GetAll",
+    "RelativePath": "api/FonctionDirigeant",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FonctionDirigeantController",
+    "Method": "Add",
+    "RelativePath": "api/FonctionDirigeant",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "function",
+        "Type": "CreditDeclaration.Models.FonctionDirigeant",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FonctionDirigeantController",
+    "Method": "GetById",
+    "RelativePath": "api/FonctionDirigeant/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FonctionDirigeantController",
+    "Method": "Update",
+    "RelativePath": "api/FonctionDirigeant/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "function",
+        "Type": "CreditDeclaration.Models.FonctionDirigeant",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FonctionDirigeantController",
+    "Method": "Delete",
+    "RelativePath": "api/FonctionDirigeant/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FormeJuridiqueController",
+    "Method": "GetAll",
+    "RelativePath": "api/FormeJuridique",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FormeJuridiqueController",
+    "Method": "Add",
+    "RelativePath": "api/FormeJuridique",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "CreditDeclaration.Models.FormeJuridique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FormeJuridiqueController",
+    "Method": "GetById",
+    "RelativePath": "api/FormeJuridique/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FormeJuridiqueController",
+    "Method": "Update",
+    "RelativePath": "api/FormeJuridique/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "form",
+        "Type": "CreditDeclaration.Models.FormeJuridique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.FormeJuridiqueController",
+    "Method": "Delete",
+    "RelativePath": "api/FormeJuridique/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.MonnaieController",
+    "Method": "GetAll",
+    "RelativePath": "api/Monnaie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.MonnaieController",
+    "Method": "Add",
+    "RelativePath": "api/Monnaie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "change",
+        "Type": "CreditDeclaration.Models.Monnaie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.MonnaieController",
+    "Method": "GetById",
+    "RelativePath": "api/Monnaie/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.MonnaieController",
+    "Method": "Update",
+    "RelativePath": "api/Monnaie/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "change",
+        "Type": "CreditDeclaration.Models.Monnaie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.MonnaieController",
+    "Method": "Delete",
+    "RelativePath": "api/Monnaie/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.NiveauResponsabiliteController",
+    "Method": "GetAll",
+    "RelativePath": "api/NiveauResponsabilite",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.NiveauResponsabiliteController",
+    "Method": "Add",
+    "RelativePath": "api/NiveauResponsabilite",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "level",
+        "Type": "CreditDeclaration.Models.NiveauResponsabilite",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.NiveauResponsabiliteController",
+    "Method": "GetById",
+    "RelativePath": "api/NiveauResponsabilite/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.NiveauResponsabiliteController",
+    "Method": "Update",
+    "RelativePath": "api/NiveauResponsabilite/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "level",
+        "Type": "CreditDeclaration.Models.NiveauResponsabilite",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.NiveauResponsabiliteController",
+    "Method": "Delete",
+    "RelativePath": "api/NiveauResponsabilite/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PaysController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pays",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PaysController",
+    "Method": "Add",
+    "RelativePath": "api/Pays",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "CreditDeclaration.Models.Pays",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PaysController",
+    "Method": "GetById",
+    "RelativePath": "api/Pays/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PaysController",
+    "Method": "Update",
+    "RelativePath": "api/Pays/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "country",
+        "Type": "CreditDeclaration.Models.Pays",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PaysController",
+    "Method": "Delete",
+    "RelativePath": "api/Pays/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PersonnePhysiqueController",
+    "Method": "GetAll",
+    "RelativePath": "api/PersonnePhysique",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PersonnePhysiqueController",
+    "Method": "Add",
+    "RelativePath": "api/PersonnePhysique",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "person",
+        "Type": "CreditDeclaration.Modals.PersonnePhysique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PersonnePhysiqueController",
+    "Method": "GetById",
+    "RelativePath": "api/PersonnePhysique/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PersonnePhysiqueController",
+    "Method": "Update",
+    "RelativePath": "api/PersonnePhysique/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "person",
+        "Type": "CreditDeclaration.Modals.PersonnePhysique",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.PersonnePhysiqueController",
+    "Method": "Delete",
+    "RelativePath": "api/PersonnePhysique/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ProfessionController",
+    "Method": "GetAll",
+    "RelativePath": "api/Profession",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ProfessionController",
+    "Method": "Add",
+    "RelativePath": "api/Profession",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Profession",
+        "Type": "CreditDeclaration.Models.Profession",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ProfessionController",
+    "Method": "GetById",
+    "RelativePath": "api/Profession/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ProfessionController",
+    "Method": "Update",
+    "RelativePath": "api/Profession/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Profession",
+        "Type": "CreditDeclaration.Models.Profession",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.ProfessionController",
+    "Method": "Delete",
+    "RelativePath": "api/Profession/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SituationCreditController",
+    "Method": "GetAll",
+    "RelativePath": "api/SituationCredit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SituationCreditController",
+    "Method": "Add",
+    "RelativePath": "api/SituationCredit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Situation",
+        "Type": "CreditDeclaration.Models.SituationCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SituationCreditController",
+    "Method": "GetById",
+    "RelativePath": "api/SituationCredit/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SituationCreditController",
+    "Method": "Update",
+    "RelativePath": "api/SituationCredit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Situation",
+        "Type": "CreditDeclaration.Models.SituationCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SituationCreditController",
+    "Method": "Delete",
+    "RelativePath": "api/SituationCredit/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SourceInformationController",
+    "Method": "GetAll",
+    "RelativePath": "api/SourceInformation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SourceInformationController",
+    "Method": "Add",
+    "RelativePath": "api/SourceInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Source",
+        "Type": "CreditDeclaration.Models.SourceInformationCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SourceInformationController",
+    "Method": "GetById",
+    "RelativePath": "api/SourceInformation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SourceInformationController",
+    "Method": "Update",
+    "RelativePath": "api/SourceInformation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Source",
+        "Type": "CreditDeclaration.Models.SourceInformationCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.SourceInformationController",
+    "Method": "Delete",
+    "RelativePath": "api/SourceInformation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeCreditController",
+    "Method": "GetAll",
+    "RelativePath": "api/TypeCredit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeCreditController",
+    "Method": "Add",
+    "RelativePath": "api/TypeCredit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "CreditDeclaration.Models.TypeCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeCreditController",
+    "Method": "GetById",
+    "RelativePath": "api/TypeCredit/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeCreditController",
+    "Method": "Update",
+    "RelativePath": "api/TypeCredit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "CreditDeclaration.Models.TypeCredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeCreditController",
+    "Method": "Delete",
+    "RelativePath": "api/TypeCredit/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeDocumentController",
+    "Method": "GetAll",
+    "RelativePath": "api/TypeDocument",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeDocumentController",
+    "Method": "Add",
+    "RelativePath": "api/TypeDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "document",
+        "Type": "CreditDeclaration.Models.TypeDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeDocumentController",
+    "Method": "GetById",
+    "RelativePath": "api/TypeDocument/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeDocumentController",
+    "Method": "Update",
+    "RelativePath": "api/TypeDocument/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "document",
+        "Type": "CreditDeclaration.Models.TypeDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeDocumentController",
+    "Method": "Delete",
+    "RelativePath": "api/TypeDocument/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeGarantieController",
+    "Method": "GetAll",
+    "RelativePath": "api/TypeGarantie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeGarantieController",
+    "Method": "Add",
+    "RelativePath": "api/TypeGarantie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "collateral",
+        "Type": "CreditDeclaration.Models.TypeGarantie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeGarantieController",
+    "Method": "GetById",
+    "RelativePath": "api/TypeGarantie/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeGarantieController",
+    "Method": "Update",
+    "RelativePath": "api/TypeGarantie/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "bank",
+        "Type": "CreditDeclaration.Models.TypeGarantie",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypeGarantieController",
+    "Method": "Delete",
+    "RelativePath": "api/TypeGarantie/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypePersonneController",
+    "Method": "GetAll",
+    "RelativePath": "api/TypePersonne",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypePersonneController",
+    "Method": "Add",
+    "RelativePath": "api/TypePersonne",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "person",
+        "Type": "CreditDeclaration.Models.TypePersonne",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypePersonneController",
+    "Method": "GetById",
+    "RelativePath": "api/TypePersonne/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypePersonneController",
+    "Method": "Update",
+    "RelativePath": "api/TypePersonne/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "bank",
+        "Type": "CreditDeclaration.Models.TypePersonne",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.TypePersonneController",
+    "Method": "Delete",
+    "RelativePath": "api/TypePersonne/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.WilayaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Wilaya",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.WilayaController",
+    "Method": "Add",
+    "RelativePath": "api/Wilaya",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "wil",
+        "Type": "CreditDeclaration.Models.Wilaya",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.WilayaController",
+    "Method": "GetById",
+    "RelativePath": "api/Wilaya/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.WilayaController",
+    "Method": "Update",
+    "RelativePath": "api/Wilaya/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "wilaya",
+        "Type": "CreditDeclaration.Models.Wilaya",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CreditDeclaration.Controllers.WilayaController",
+    "Method": "Delete",
+    "RelativePath": "api/Wilaya/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

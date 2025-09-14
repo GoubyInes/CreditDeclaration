@@ -1,0 +1,27 @@
+{"timestamp":"2025-05-29T14:37:36.710761","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-29T14:37:36.711304","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-29T14:37:36.867393","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-29T14:37:36.958836","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-05-29T14:37:36.959333","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-29T14:37:36.963917","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.134907","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.139856","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.146484","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.146931","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-29T14:37:37.147333Z","level":"info","event":"Fichiers sur le serveur : ['.io', '.mozilla', '.scoadmin.pref', '.ssh', 'CD-ROM_1', 'Disk_A', 'OpenServer', 'bck', 'bin', 'ccs', 'config', 'core.1011', 'dev', 'etc', 'export', 'home', 'home2', 'home21', 'home22', 'home23', 'home31', 'home32', 'install', 'installr', 'lbin', 'lib', 'lost+found', 'mnt', 'opt', 'pmd', 'print', 'proc', 'save', 'sbin', 'secret', 'share', 'shlib', 'stand', 'system', 'tmp', 'u95', 'unix', 'usr', 'var']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-29T14:37:37.149684","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.314744","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.319866","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.327486","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.327980","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-29T14:37:37.331376","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.498857","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.503373","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.715912","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:37.716402","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-29T14:37:37.720378","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.887402","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-29T14:37:37.891974","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:38.070275","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-29T14:37:38.071317","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-29T14:37:38.072902Z","level":"info","event":"File saved to /opt/airflow/dags/data/test","chan":"stdout","logger":"task"}

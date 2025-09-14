@@ -1,0 +1,305 @@
+{"timestamp":"2025-08-06T14:49:18.167900","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-06T14:49:18.168408","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-06T14:49:18.212518","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:49:18.254801","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-08-06T14:49:18.295885","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.310575","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.339626","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.348234","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.348397","level":"info","event":"File uploaded: 1610608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354063","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354191","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354262","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354358","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354420","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354484","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354544","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354600","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.354673","level":"info","event":"File uploaded: 1610608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359295","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359434","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359504","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359565","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359622","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359673","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359754","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359813","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.359867","level":"info","event":"File uploaded: 1610608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.362961","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363064","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363136","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363201","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363262","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363316","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363367","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363417","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.363469","level":"info","event":"File uploaded: 1610608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.366856","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.366995","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367091","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367164","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367230","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367292","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367385","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367449","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.367507","level":"info","event":"File uploaded: 1610608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372512","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372635","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372708","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372772","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372830","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372887","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372940","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.372992","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.373050","level":"info","event":"File uploaded: 1610608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.377219","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.389482","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.417278","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.422658","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.422796","level":"info","event":"File uploaded: 1620608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.428657","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.428795","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.428898","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.428969","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.429030","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.429089","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.429148","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.429208","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.429267","level":"info","event":"File uploaded: 1620608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433272","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433388","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433459","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433523","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433617","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433691","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433750","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433801","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.433853","level":"info","event":"File uploaded: 1620608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437265","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437391","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437493","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437568","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437629","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437747","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437816","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437872","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.437927","level":"info","event":"File uploaded: 1620608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.441701","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.441838","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.441911","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.441973","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.442034","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.442089","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.442146","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.442201","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.442252","level":"info","event":"File uploaded: 1620608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.445663","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.445778","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.445846","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.445903","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.445957","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.446011","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.446064","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.446119","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.446177","level":"info","event":"File uploaded: 1620608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.449337","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.461955","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.511188","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.523935","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.524295","level":"info","event":"File uploaded: 1630608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.534636","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.534766","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.534832","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535028","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535098","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535153","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535213","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535271","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.535383","level":"info","event":"File uploaded: 1630608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541004","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541161","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541235","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541305","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541394","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541467","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541531","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541592","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.541652","level":"info","event":"File uploaded: 1630608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.546772","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.546905","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.546982","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547049","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547112","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547172","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547231","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547288","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.547342","level":"info","event":"File uploaded: 1630608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551132","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551254","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551331","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551398","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551463","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551518","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551571","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551622","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.551674","level":"info","event":"File uploaded: 1630608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556076","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556187","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556276","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556340","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556397","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556449","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556499","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556550","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.556601","level":"info","event":"File uploaded: 1630608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.561142","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.574340","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.613717","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.618929","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.619059","level":"info","event":"File uploaded: 1640608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.624869","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625010","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625103","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625167","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625255","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625316","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625377","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625438","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.625501","level":"info","event":"File uploaded: 1640608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629375","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629497","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629590","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629661","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629761","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629820","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629876","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629930","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.629984","level":"info","event":"File uploaded: 1640608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633128","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633242","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633312","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633378","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633442","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633501","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633580","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633647","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.633718","level":"info","event":"File uploaded: 1640608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.636667","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.636792","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.636869","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.636933","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.636993","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.637075","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.637136","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.637190","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.637248","level":"info","event":"File uploaded: 1640608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641117","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641249","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641322","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641388","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641452","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641506","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641589","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641643","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.641736","level":"info","event":"File uploaded: 1640608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.644577","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.655993","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.703503","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.755864","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.756058","level":"info","event":"File uploaded: 1650608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765454","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765658","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765763","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765824","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765879","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.765932","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.766003","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.766082","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.766142","level":"info","event":"File uploaded: 1650608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.770804","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.770938","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771013","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771072","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771130","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771183","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771234","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771313","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.771375","level":"info","event":"File uploaded: 1650608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775284","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775454","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775538","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775607","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775668","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775726","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775783","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775835","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.775910","level":"info","event":"File uploaded: 1650608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779003","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779119","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779191","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779261","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779327","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779390","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779452","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779506","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.779566","level":"info","event":"File uploaded: 1650608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784182","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784302","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784379","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784448","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784512","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784573","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784629","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784680","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.784732","level":"info","event":"File uploaded: 1650608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.788010","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.802550","level":"error","event":"❌ Échec de l'insertion du dernier batch : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.834259","level":"error","event":"❌ Ligne rejetée : ('23000', '[23000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]L\\'instruction INSERT est en conflit avec la contrainte FOREIGN KEY \"FK_Personne_Physique_Etat_Civil_etat_civil\". Le conflit s\\'est produit dans la base de données \"CreditDeclaration\", table \"dbo.Etat_Civil\", column \\'code\\'. (547) (SQLExecDirectW)')","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.839775","level":"warning","event":"⚠️ 1 lignes rejetées sauvegardées dans /opt/airflow/dags/data/rejected_rows.txt","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.839903","level":"info","event":"File uploaded: 1660608CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846087","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846237","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846308","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846370","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846427","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846483","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846536","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846592","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.846651","level":"info","event":"File uploaded: 1660608CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.850597","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.850731","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.850810","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.850878","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.850943","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.851003","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.851078","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.851136","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.851190","level":"info","event":"File uploaded: 1660608CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.855645","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.855751","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.855822","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.855886","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.855946","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.856004","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.856083","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.856149","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.856202","level":"info","event":"File uploaded: 1660608CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860260","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860402","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860480","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860551","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860614","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860676","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860733","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860784","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.860837","level":"info","event":"File uploaded: 1660608CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865370","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865503","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865578","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865645","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865720","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865782","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865840","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (31)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865894","level":"warning","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect (1)","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.865949","level":"info","event":"File uploaded: 1660608CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:49:18.866675","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

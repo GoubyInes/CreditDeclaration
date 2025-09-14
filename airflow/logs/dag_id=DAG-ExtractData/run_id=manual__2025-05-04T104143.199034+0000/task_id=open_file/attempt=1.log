@@ -1,0 +1,25 @@
+{"timestamp":"2025-05-04T10:41:45.154328","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-04T10:41:45.154944","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-04T10:41:46.103557Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.103962Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.104289Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.104932Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.105261Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.105615Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.105962Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.106323Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.106656Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.106987Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.107477Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.108116Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.108631Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.108997Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.109293Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.109570Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.109835Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.110087Z","level":"info","event":"161","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.110371Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.110653Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.110939Z","level":"info","event":"EOF","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:46.111256Z","level":"info","event":"","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T10:41:45.990080","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

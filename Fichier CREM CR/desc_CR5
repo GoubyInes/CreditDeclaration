@@ -1,0 +1,29 @@
+Descriptions : fichier CREM type personnes morales - Associes
+Nom du fichier en sortie : zzzaammCR5 (indice agence + Annee + Mois + CR1)
+
+Code agence              : Z(3)
+Separateur               : |
+Radical client           : Z(6)
+Separateur               : |
+Numero sequentiel        : Z(3)
+Separateur               : |
+Type de personne         : Z(3)   (Voir referentiel B.A : TG048)
+Separateur               : |
+Indicateur de l'etat     : Z
+Separateur               : |
+Designation sociale      : W(100)
+Separateur               : |
+Prenom / Sigle           : W(50)
+Separateur               : |
+date naissance/creation  : JJ/MM/AAAA
+Separateur               : |
+Pays de residence        : Z(3)  (Voir referentiel B.A : TG006)
+Separateur               : |
+Identifiant unique       : W(25)
+Separateur               : |
+Pourcentage participation: (Z3.Z2)
+Separateur               : |
+Date prise particiaption : JJ/MM/AAAA
+Separateur               : |
+Fonction                 : Z(3)  (Voir referentiel B.A : TG215)
+----------------------------------------------------------------------------------------------

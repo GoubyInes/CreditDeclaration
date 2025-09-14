@@ -1,0 +1,833 @@
+{"timestamp":"2025-06-18T09:53:50.262595","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-18T09:53:50.263285","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-18T09:53:50.305703","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-18T09:53:50.503630","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-18T09:53:50.573009Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.574390Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.932210Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.933574Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.934657Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.936401Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.937409Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:50.938442Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.146254Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.147224Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.224427Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.270965Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.271629Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.272624Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.273245Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.286607Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.287240Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.287925Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.424969Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.425819Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.426657Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.511267Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.557559Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.557913Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.577243Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.577634Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.578080Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.633885Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.710432Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.710881Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.711410Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.711846Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.712192Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.769365Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.769829Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.770156Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.827133Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.827591Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.827975Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.828425Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.828799Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.829194Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.829565Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.829967Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.830358Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.830737Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.831146Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.831499Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.832163Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.832525Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.832879Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.833242Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.833621Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.833969Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.834323Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.834598Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.835076Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.836756Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.837559Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.837963Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.838345Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.838650Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.838926Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.839450Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.839705Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.839977Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.840229Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.840618Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.840876Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.841158Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.841647Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.841942Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.842185Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.842408Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.842675Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.843008Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.843238Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.843458Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.843777Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.844126Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.844363Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.844638Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.844890Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.845668Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.846485Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.847567Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.847976Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.848413Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.848752Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.849087Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.849770Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.850254Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.850598Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.851316Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.851797Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.852401Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.853048Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.853405Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.853759Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.854153Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.854507Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.854827Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.855306Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.855780Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.856087Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.857221Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.857523Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.857771Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.858018Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.858281Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.859507Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.859879Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.860168Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.860446Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.860762Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.861219Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.861513Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.861793Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.862102Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.288296","level":"info","event":"File uploaded: 1611806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:51.553181","level":"info","event":"File uploaded: 1621806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:51.636926","level":"info","event":"File uploaded: 1631806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:51.672274","level":"info","event":"File uploaded: 1641806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:51.863966Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.866139Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.866553Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.867031Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.867330Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.867653Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.869750Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.870467Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.870817Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.871123Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.871474Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.871760Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.872233Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.872524Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.872775Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.873245Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.873551Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.873825Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.875013Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.875373Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.875627Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.875863Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.876141Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.876446Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.876740Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.877329Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.877641Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.877898Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.878330Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.878591Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.878837Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.879311Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.879639Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.879876Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.880282Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.881103Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.881403Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.881852Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.882159Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.882408Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.882849Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.883149Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.883421Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.883683Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.883939Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.884201Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.884443Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.884660Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.885521Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.885981Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.886395Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.887013Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.887527Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.887895Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.888266Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.888572Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.888845Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.889159Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.889532Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.889812Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.890035Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.890356Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.890710Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.891063Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.892023Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.892551Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.893223Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.893790Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.894128Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.894419Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.894919Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.895264Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.895590Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.897490Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.897905Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.898152Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.898595Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.898888Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.899153Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.899651Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.899965Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.900247Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.900492Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.900963Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.901300Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.901748Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.902080Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.902570Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.905056Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.907918Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.908419Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.910538Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.910934Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.911480Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.911787Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.912015Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.912214Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.912531Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.912832Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.913042Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.913284Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.913687Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.913988Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.914225Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.914783Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.915090Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.915408Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.916468Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.916762Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.917048Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.917967Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.918253Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.918536Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.918838Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.919111Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.919462Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.919705Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.920208Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.920638Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.920906Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.921359Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.921714Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.921967Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.922368Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.922740Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.922998Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.923516Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.923794Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.924042Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.924554Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.924862Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.925125Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.925350Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.925661Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.925995Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.926253Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.926752Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.927033Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.927267Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.927531Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.927832Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.928107Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.928310Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.928501Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.928800Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.929105Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.929312Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.929497Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.929737Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.930096Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.930268Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.930445Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.930773Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.931081Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.931255Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.931468Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.931880Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.932173Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.932355Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.933362Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.933802Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.934181Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.934736Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.935130Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.935418Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.935804Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.936351Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.936661Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.936930Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.937336Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.937726Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.937987Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.938746Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.939146Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.939537Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.939954Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.940468Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.940990Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.941301Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.941999Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.942309Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.942569Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.943573Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.943953Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.944268Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.944735Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.945076Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.945346Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.945661Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.945961Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.946249Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.946636Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.946914Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.947175Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.947606Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.947894Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.948140Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.948539Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.948835Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.949148Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.950120Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.950391Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.950618Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.950799Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.951069Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.951396Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.951613Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.951815Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.952094Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.952474Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.952858Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.953438Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.953761Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.954040Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.954249Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.955331Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.955728Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.955954Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.956193Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.956432Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.956750Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.956974Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.957204Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.957438Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.957740Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.957962Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.958196Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.958429Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.958740Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.958961Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.959191Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.959454Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.959749Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.959973Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.960200Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.960431Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.960711Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.960904Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.961104Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.961377Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.961662Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.961850Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.962027Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.964551Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.964835Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.965029Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.965206Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.965514Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.965880Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.966073Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.966251Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.966559Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.966865Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.967057Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.967234Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.967546Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.967832Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.968059Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.968334Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.968942Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.969482Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.969865Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.970285Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.970626Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.970865Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.971182Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.971623Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.971909Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.972185Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.972461Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.972759Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.973044Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.973331Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.973678Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.973921Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.974169Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.974463Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.974774Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.975038Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.975276Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.975522Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.975770Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.975990Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.976233Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.976466Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.976809Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.977124Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.977356Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.977589Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.977824Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.978118Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.978337Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.978581Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.978814Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.979155Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.979524Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.979786Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.981421Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.981759Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.982131Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.982448Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.982725Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.983242Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.983746Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.984073Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.984319Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.984623Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.985004Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.985295Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.985593Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.985872Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.986180Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.986457Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.986802Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.987205Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.987566Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.987880Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.988201Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.988465Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.988740Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.989024Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.990038Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.990325Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.990586Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.990870Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.991173Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.991488Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.992487Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.992796Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.993110Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.993463Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.993676Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.993912Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.994117Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.994370Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.994683Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.994908Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.995183Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.995538Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.996055Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.996333Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.996590Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.996912Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.997150Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.997395Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.997756Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.997998Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.998475Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.998743Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.999074Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.999389Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.999700Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.999976Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.001131Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.001528Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.001789Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.002222Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.002677Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.003058Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.003379Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.003770Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.004235Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.004524Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.004797Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.005140Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.005441Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.005839Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.006113Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.006333Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.006578Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.006814Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.007144Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.007447Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.007940Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.008223Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.008533Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.009140Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.009511Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.009829Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.010186Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.010501Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.010760Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.011243Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.011528Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.011803Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.012060Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.012442Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.012723Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.013042Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.013514Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.013775Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.014062Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.014499Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.014784Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.015006Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.015212Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.015522Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.015798Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.016040Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.016256Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.016505Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.016801Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.017151Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.017538Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.017845Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.018106Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.018302Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.018800Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.019233Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.019942Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.020438Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.020921Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.021235Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.021558Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:51.984349","level":"info","event":"File uploaded: 1651806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:52.022239Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.023751Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.024169Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.024473Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.024905Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.025190Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.025475Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.025944Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.026274Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.026526Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.026737Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.027009Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.027437Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.027700Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.029042Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.029416Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.029610Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.029840Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.030248Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.030486Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.030786Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.031230Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.031539Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.031834Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.032255Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.032586Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.032867Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.033215Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.033511Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.033708Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.033928Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.034181Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.034523Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.034764Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.035328Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.035745Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.036067Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.036398Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.037124Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.037636Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.037899Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.038282Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.049143Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.049943Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.050273Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.050608Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.050931Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.051252Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.051548Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.051946Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.052248Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.052600Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.052989Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.053312Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.053631Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.053964Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.054267Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.054567Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.054997Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.055879Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.056187Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.057086Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.057465Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.057745Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.058147Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.058477Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.058875Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.059148Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.059491Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.059815Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.060391Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.060783Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.061064Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.061415Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.061742Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.062059Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.062362Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.062672Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.063001Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.063410Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.063742Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.064035Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.064319Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.064600Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.064880Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.065234Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.065611Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.065904Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.066956Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.068214Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.068515Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.068911Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.069273Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.069558Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.070097Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.070401Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.070665Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.071063Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.071419Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.071691Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.071949Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.072215Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.072664Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.073007Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.073282Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.073741Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.074019Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.074290Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.074702Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.074978Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.075379Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.075634Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.075902Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.076333Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.076618Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.076880Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.077214Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.077493Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.077749Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.078081Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.078957Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.033757","level":"info","event":"File uploaded: 1661806CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-18T09:53:52.035867","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-06-18T09:53:52.177837Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.178355Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.252426Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.253578Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.302487Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.304249Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.306552Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.308441Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.310653Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.312209Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.314377Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.316437Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.402291Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.403201Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.445086Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.446690Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.448527Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.450026Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.451545Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.453200Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.454748Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.456138Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.457671Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.459066Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.460558Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.462031Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.463653Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.465031Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.466051Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.467085Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.468091Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.471605Z","level":"error","event":"--- Logging error ---","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.472494Z","level":"error","event":"Traceback (most recent call last):","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.473810Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 128, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.474617Z","level":"error","event":"    msg = self.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.477302Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.478195Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 999, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.479218Z","level":"error","event":"    return fmt.format(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.479943Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.480887Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/structlog/stdlib.py\", line 1121, in format","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.481442Z","level":"error","event":"    record.getMessage()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.481978Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 392, in getMessage","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.482520Z","level":"error","event":"    msg = msg % self.args","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.483040Z","level":"error","event":"          ~~~~^~~~~~~~~~~","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.483519Z","level":"error","event":"TypeError: not all arguments converted during string formatting","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.485240Z","level":"error","event":"Call stack:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.485758Z","level":"error","event":"  File \"/home/airflow/.local/bin/airflow\", line 8, in <module>","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.486381Z","level":"error","event":"    sys.exit(main())","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.486962Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/__main__.py\", line 55, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.487514Z","level":"error","event":"    args.func(args)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.487972Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py\", line 48, in command","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.488470Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.488909Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py\", line 111, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.489563Z","level":"error","event":"    return f(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.490054Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 65, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.490491Z","level":"error","event":"    providers_configuration_loaded(func)(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.490936Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/providers_configuration_loader.py\", line 55, in wrapped_function","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.491367Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.491815Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 280, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.492304Z","level":"error","event":"    _run_command_with_daemon_option(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.493649Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 51, in _run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.494085Z","level":"error","event":"    run_command_with_daemon_option(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.494544Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/daemon_utils.py\", line 86, in run_command_with_daemon_option","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.494963Z","level":"error","event":"    callback()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.495500Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/cli/celery_command.py\", line 273, in run_celery_worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.495915Z","level":"error","event":"    celery_app.worker_main(options)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.496661Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 470, in worker_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.497038Z","level":"error","event":"    self.start(argv=argv)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.497428Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/base.py\", line 450, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.497876Z","level":"error","event":"    celery.main(args=argv, standalone_mode=False)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.498263Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1082, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.498863Z","level":"error","event":"    rv = self.invoke(ctx)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.499929Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1697, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.500328Z","level":"error","event":"    return _process_result(sub_ctx.command.invoke(sub_ctx))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.500705Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 1443, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.502321Z","level":"error","event":"    return ctx.invoke(self.callback, **ctx.params)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.502689Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/core.py\", line 788, in invoke","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.503265Z","level":"error","event":"    return __callback(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.503796Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/click/decorators.py\", line 33, in new_func","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.504252Z","level":"error","event":"    return f(get_current_context(), *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.504896Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/base.py\", line 135, in caller","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.505305Z","level":"error","event":"    return f(ctx, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.505739Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bin/worker.py\", line 356, in worker","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.506418Z","level":"error","event":"    worker.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.507054Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/worker/worker.py\", line 203, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.507474Z","level":"error","event":"    self.blueprint.start(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.507846Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 116, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.508173Z","level":"error","event":"    step.start(parent)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.509335Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/bootsteps.py\", line 365, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.509685Z","level":"error","event":"    return self.obj.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.510099Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/base.py\", line 130, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.510438Z","level":"error","event":"    self.on_start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.512110Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/prefork.py\", line 109, in on_start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.512478Z","level":"error","event":"    P = self._pool = Pool(processes=self.limit,","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.512799Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 473, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.513227Z","level":"error","event":"    super().__init__(processes, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.513594Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1046, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.513982Z","level":"error","event":"    self._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.514316Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/concurrency/asynpool.py\", line 491, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.514702Z","level":"error","event":"    return super()._create_worker_process(i)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.515636Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 1158, in _create_worker_process","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.516050Z","level":"error","event":"    w.start()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.516389Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 120, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.516709Z","level":"error","event":"    self._popen = self._Popen(self)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.517132Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/context.py\", line 331, in _Popen","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.517440Z","level":"error","event":"    return Popen(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.517871Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 22, in __init__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.518197Z","level":"error","event":"    self._launch(process_obj)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.518453Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/popen_fork.py\", line 77, in _launch","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.519307Z","level":"error","event":"    code = process_obj._bootstrap()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.519718Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 323, in _bootstrap","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.520021Z","level":"error","event":"    self.run()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.520512Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/process.py\", line 110, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.521975Z","level":"error","event":"    self._target(*self._args, **self._kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.522256Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 292, in __call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.522765Z","level":"error","event":"    sys.exit(self.workloop(pid=pid))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.523050Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/billiard/pool.py\", line 362, in workloop","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.523310Z","level":"error","event":"    result = (True, prepare_result(fun(*args, **kwargs)))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.523796Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 651, in fast_trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.524040Z","level":"error","event":"    R, I, T, Rstr = tasks[task].__trace__(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.524299Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 453, in trace_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.524541Z","level":"error","event":"    R = retval = fun(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.524863Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/celery/app/trace.py\", line 736, in __protected_call__","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.525102Z","level":"error","event":"    return self.run(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.525362Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/celery/executors/celery_executor_utils.py\", line 161, in execute_workload","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.525894Z","level":"error","event":"    supervise(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.526131Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 1313, in supervise","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.526393Z","level":"error","event":"    process = ActivitySubprocess.start(","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.526628Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 783, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.526913Z","level":"error","event":"    proc: Self = super().start(id=what.id, client=client, target=target, logger=logger, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.527210Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 461, in start","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.527468Z","level":"error","event":"    _fork_main(child_stdin, child_stdout, child_stderr, child_logs.fileno(), target)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.527934Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 368, in _fork_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.528204Z","level":"error","event":"    target()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.528469Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/supervisor.py\", line 193, in _subprocess_main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.528845Z","level":"error","event":"    main()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.529143Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1215, in main","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.529418Z","level":"error","event":"    state, msg, error = run(ti, context, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.529865Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 825, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.530131Z","level":"error","event":"    result = _execute_task(context, ti, log)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.530408Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py\", line 1088, in _execute_task","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.530843Z","level":"error","event":"    result = ctx.run(execute, context=context)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.531140Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py\", line 408, in wrapper","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.531399Z","level":"error","event":"    return func(self, *args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.531814Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 212, in execute","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.532143Z","level":"error","event":"    return_value = self.execute_callable()","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.532371Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py\", line 235, in execute_callable","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.532569Z","level":"error","event":"    return runner.run(*self.op_args, **self.op_kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.533270Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py\", line 81, in run","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.534210Z","level":"error","event":"    return func(*args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.534528Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 119, in readFile","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.535398Z","level":"error","event":"    insertDatabase(columns , database, sql[index] , nbColumns[index], cursor)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.535648Z","level":"error","event":"  File \"/opt/airflow/dags/loadData.py\", line 85, in insertDatabase","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.535932Z","level":"error","event":"    log.info(\"⚠️ Ligne ignorée : nombre de colonnes incorrect :\", len(columns))","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.536195Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1539, in info","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.536758Z","level":"error","event":"    self._log(INFO, msg, args, **kwargs)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.537131Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1684, in _log","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.537415Z","level":"error","event":"    self.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.537922Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1700, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.538225Z","level":"error","event":"    self.callHandlers(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.538459Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1762, in callHandlers","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.538673Z","level":"error","event":"    hdlr.handle(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.539060Z","level":"error","event":"  File \"/usr/local/lib/python3.12/logging/__init__.py\", line 1028, in handle","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.539369Z","level":"error","event":"    self.emit(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.539623Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/log.py\", line 139, in emit","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.540142Z","level":"error","event":"    self.handleError(record)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.540473Z","level":"error","event":"Message: '⚠️ Ligne ignorée : nombre de colonnes incorrect :'","chan":"stderr","logger":"task"}
+{"timestamp":"2025-06-18T09:53:52.540717Z","level":"error","event":"Arguments: (1,)","chan":"stderr","logger":"task"}

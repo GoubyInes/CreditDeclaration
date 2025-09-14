@@ -1,0 +1,794 @@
+
+
+CREATE TABLE Niveau_Responsabilite (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(50),
+    descriptif NVARCHAR(100)
+);
+
+INSERT INTO Niveau_Responsabilite (code, domaine, descriptif) VALUES
+('001', 'Emprunteur', 'Bénéficiaire de crédit (Débiteur)'),
+('002', 'Emprunteur Principal', 'Débiteur principal'),
+('003', 'Co-emprunteur', 'Codébiteur'),
+('004', 'Locataire propriétaire', 'Bénéficiaire de crédit-bail'),
+('005', 'Garant', 'Caution'),
+('006', 'Tiré', 'Tiré');
+
+
+CREATE TABLE Situation_Credit (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Situation_Credit (code, domaine, descriptif) VALUES
+('001', 'Crédit rejeté', 'Crédit rejeté suite à une demande de consultation'),
+('900', 'Crédit à risque potentiel', 'Crédit accordé mais non décaissé'),
+('002', 'Crédit régulier', 'Crédit en situation régulière : cette classe concerne d’une part, le débiteur solvable (aucun incident de paiement constaté) et, d’autre part, le débiteur déclaré antérieurement en défaut de paiement mais ayant régularisé sa situation entre-temps ou dans le cadre d’une opération de restructuration.'),
+('010', 'Crédit impayé', 'Crédit en situation irrégulière suite à un retard dans le remboursement d’une ou plusieurs échéances mais n’ayant pas fait l’objet de déclaration en créance classée sous revue.'),
+('011', 'Créance à problèmes potentiels', 'Créance à problèmes potentiels'),
+('012', 'Créance très risquée', 'Créance très risquée'),
+('013', 'Créance compromise', 'Créance compromise'),
+('014', 'Créance classée restructurée', 'Créance classée, restructurée au sens de l’article 7 du règlement n° 14-03 du 16 février 2014 portant coefficients de solvabilité applicables aux banques et établissements financiers. CF. descriptif des rubriques de déclaration de crédit (Portail). Cette situation est utilisable uniquement dans le cas d’un crédit restructuré pendant les 12 mois suivant sa mise en place. Après 12 mois, deux cas peuvent se présenter : - Si les remboursements se font conformément aux échéances prévues, le crédit restructuré sera déclaré avec la situation crédit régulier. - Si les remboursements ne sont pas faits dans les délais prévus, le crédit restructuré sera déclaré avec la situation de créance classée dans laquelle il se trouvait avant sa restructuration.'),
+('015', 'Créance défaillante', 'Créance détenue sur une contrepartie en contentieux et ayant fait l’objet de procédure judiciaire'),
+('018', 'Créance irrécouvrable', 'Sont considérés comme créances irrécouvrables, les créances dont la perte apparaît comme certaine et définitive résultant de décisions judiciaires. Cette situation est déclarable une seule fois.'),
+('020', 'Crédit remboursé', 'Crédit remboursé (crédit dont les échéances sont entièrement remboursées). Cette situation est déclarable une seule fois après le remboursement de la dernière échéance du crédit.');
+
+
+CREATE TABLE Classe_Retard_Credit (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(200)
+);
+
+INSERT INTO Classe_Retard_Credit (code, domaine, descriptif) VALUES
+('001', 'Jusqu''à  30 jours', 'Jusqu''à  30 jours'),
+('002', 'Plus de 30 à 60 jours', 'Plus de 30 à 60 jours'),
+('003', 'Plus de 60 à 90 jours', 'Plus de 60 à 90 jours'),
+('010', 'Plus de 90 à 180 jours', 'Plus de 90 à 180 jours'),
+('020', 'Plus de 180 à 270 jours', 'Plus de 180 à 270 jours'),
+('021', 'Plus de 270 à 360 jours', 'Plus de 270 à 360 jours'),
+('030', 'Plus de 12 à 15 mois', 'Plus de 12 à 15 mois'),
+('031', 'Plus de 15 à 18 mois', 'Plus de 15 à 18 mois'),
+('032', 'Plus de 18 à 24 mois', 'Plus de 18 à 24 mois'),
+('033', 'Plus de 24 à 30 mois', 'Plus de 24 à 30 mois'),
+('034', 'Plus de 30 à 36 mois', 'Plus de 30 à 36 mois'),
+('035', 'Plus de 36 à 48 mois', 'Plus de 36 à 48 mois'),
+('036', 'Plus de 48 à 60 mois', 'Plus de 48 à 60 mois'),
+('037', 'Plus de 60 mois', 'Plus de 60 mois'),
+('100', '0 jour : effet de contagion', '0 jour : effet de contagion'),
+('200', '0 jour : risque probable ou certain de non recouvrement', '0 jour : risque probable ou certain de non recouvrement');
+
+
+
+CREATE TABLE Caracteristique_Credit (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Caracteristique_Credit (code, domaine, descriptif) VALUES
+('001', 'Crédits syndiqués', 
+    N'Un crédit syndiqué est un concours direct accordé, par plusieurs établissements déclarants, à un même bénéficiaire (entreprise). Cf. description des rubriques (Portail) pour plus de précision.'),
+('002', 'Crédits en compte collectif', 
+    N'Un crédit en compte collectif est un concours accordé, par un établissement déclarant, à plusieurs personnes sous un même compte. Cf. description des rubriques (Portail) pour plus de précision.'),
+('003', 'Crédits titrisés', 
+    N'Un crédit titrisé est une opération par laquelle une banque ou établissement financier cède un portefeuille de crédits compte tenu du risque qu’il représente, à un fonds externe, créé spécialement à cet effet et dont l’unique objet est de gérer ce portefeuille de crédits. Bien que la créance correspondante ne figure plus dans son bilan, l’établissement déclarant déclare cette créance qui a fait l’objet de titrisation.'),
+('004', 'Crédits participatifs', 
+    N'Un crédit participatif est un concours direct accordé par une banque ou un établissement financier à une entreprise dont elle ou il détient 
+une participation au capital et ce, en vertu des dispositions de l’article 107 de l’ordonnance n° 09-01 du 22 juillet 2009 portant loi de finances complémentaire pour 2009. Par participation, il faut entendre les parts dans les entreprises liées, les titres de participations et titres de l’activité de portefeuille et ce, conformément aux dispositions de l’Arrêté du 26 juillet 2008 fixant les règles d’évaluation et de comptabilisation, le contenu et la présentation des états financiers ainsi que la nomenclature et les règles de fonctionnement des comptes. Cf. description des rubriques (Portail) pour plus de précision.');
+
+
+
+CREATE TABLE Type_Document (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(200)
+);
+
+INSERT INTO Type_Document (code, domaine, descriptif) VALUES
+('001', N'NIN', N'NIN'),
+('002', N'Carte d''Identité Nationale', N'Carte d''Identité Nationale'),
+('003', N'Permis de conduire', N'Permis de conduire'),
+('004', N'Carte de séjour', N'Carte de séjour'),
+('005', N'Passeport', N'Passeport'),
+('006', N'Carte de sécurité sociale', N'Carte de sécurité sociale'),
+('010', N'NIF', N'NIF'),
+('011', N'NIS', N'NIS'),
+('012', N'Registre de commerce', N'Registre de commerce'),
+('020', N'Agrément', N'Numéro d’agrément'),
+('021', N'Autorisation', N'Numéro d’autorisation'),
+('022', N'Carte Fellah', N'Carte Fellah'),
+('023', N'Carte Artisan', N'Carte Artisan'),
+('090', N'Clé Banque d’Algérie', N'Clé Banque d’Algérie (applicable seulement à l’élément [d37] du référentiel des données)');
+
+
+CREATE TABLE Etat_Civil (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(50),
+    descriptif NVARCHAR(100)
+);
+
+INSERT INTO Etat_Civil (code, domaine, descriptif) VALUES
+('001', N'Célibataire', N'Célibataire'),
+('002', N'Marié (e)', N'Marié (e)'),
+('003', N'Divorcé (e)', N'Divorcé (e)'),
+('004', N'Veuf (ve)', N'Veuf (ve)');
+
+
+
+CREATE TABLE Type_Credit (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Type_Credit (code, domaine, descriptif) VALUES
+('010', N'Comptes ordinaires débiteurs', N'Comptes ordinaires débiteurs (garantis ou non)'),
+('020', N'Crédits à l’exportation', N'Crédits à l’exportation'),
+('030', N'Créances commerciales sur l’Algérie', N'Crédits de mobilisation des créances commerciales sur l’Algérie'),
+('040', N'Crédits de trésorerie', N'Crédits de trésorerie'),
+('050', N'Crédits à la consommation', N'Crédits à la consommation'),
+('051', N'Crédits Véhicule', N'Crédits Véhicule'),
+('052', N'Crédits au personnel (BA et BEF)', N'Crédits accordés au personnel de la Banque d’Algérie  ainsi qu’à celui des  Banques et Etablissements Financiers'),
+('053', N'Carte de crédit', N'Carte de crédit'),
+('060', N'Crédits d’investissement', N'Crédits d’investissement'),
+('070', N'Crédits aidés', N'Crédits aidés'),
+('080', N'Crédits immobiliers à l’Habitat', N'Crédits immobiliers à l’Habitat'),
+('081', N'Crédits immobiliers aux promoteurs', N'Crédits immobiliers aux promoteurs'),
+('090', N'Crédit-bail mobilier', N'Crédit-bail mobilier'),
+('091', N'Crédit-bail immobilier', N'Crédit-bail immobilier'),
+('100', N'Crédits restructurés', N'Crédits restructurés'),
+('110', N'Crédits de garantie aux résidents', N'Crédits de garantie aux résidents (avals, caution..)'),
+('111', N'Crédits de garantie aux non-résidents', N'Crédits de garantie aux non-résidents'),
+('120', N'Crédits documentaires', N'Crédits documentaires'),
+('900', N'Plafond des crédits accordés', N'Plafond des crédits accordés');
+
+
+
+CREATE TABLE Type_Garantie (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Type_Garantie (code, domaine, descriptif) VALUES
+('010', N'Hypothèques', N'Hypothèques'),
+('011', N'Cautions hypothécaires', N'Cautions hypothécaires'),
+('020', N'Nantissements (fonds de commerce, équipements et matériels roulants ….)', N'Nantissements (fonds de commerce, équipements  et matériels roulants)'),
+('021', N'Nantissements sur véhicules automobiles (Gages sur véhicules)', N'Nantissements sur véhicules automobiles (Gages sur véhicules)'),
+('022', N'Nantissements  de titres et autres valeurs mobilières', N'Nantissements  de titres et autres valeurs mobilières  (BDC, DAT,  …)'),
+('030', N'Dépôts de fonds (provisions sur Credoc, provision sur cautions …)', N'Dépôts de fonds (provisions sur Credoc, provisions sur cautions …)'),
+('090', N'Autres suretés réelles', N'Autres suretés réelles'),
+('100', N'Garanties de l’Etat', N'Garanties de l’Etat'),
+('101', N'Cautions conjointes, solidaires et indivisibles', N'Cautions données par des personnes ayant de liens patrimoniaux, notamment le conjoint pour les crédits aux ménages, dirigeant, associé, société mère, filiale pour les crédits accordés aux entreprises'),
+('102', N'Cautions de tiers (personnes physiques)', N'Cautions de tiers (personnes physiques)'),
+('103', N'Cautions de tiers (personnes morales)', N'Cautions de tiers (personnes morales autres que les organismes publics et les sociétés d’assurance)'),
+('110', N'Avals', N'Avals'),
+('120', N'Garanties des organismes publics', N'Garanties données par des organismes publics (CGMP, SGCI- Pme, FGAR….)'),
+('121', N'Garanties des sociétés d’assurances crédit', N'Garanties données par des sociétés d’assurances crédit'),
+('140', N'Garantie des banques et établissements financiers', N'Garantie des banques et établissements financiers'),
+('190', N'Autres suretés personnelles', N'Autres suretés personnelles');
+
+
+CREATE TABLE Entite_Publique (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(150),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Entite_Publique (code, domaine, descriptif) VALUES
+('101', N'Ministères', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('102', N'Wilayas', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('103', N'Daïras', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('104', N'Établissement sous tutelle directe des Ministères', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('201', N'Communes', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('202', N'Établissements sous tutelle des collectivités locales', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('301', N'Organismes de sécurité  sociale et de retraite', N'Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.');
+
+
+
+CREATE TABLE Source_Information_Credit (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Source_Information_Credit (code, domaine, descriptif) VALUES
+('001', N'Banque d’Algérie', N'Banque d’Algérie (Centrale des bilans des entreprises en projet)'),
+('002', N'Système interne des BEF', N'Système interne propres à chaque établissement déclarant.'),
+('003', N'Agence Standard & Poor’s', N'Organisme Externe d’Evaluation du Crédit'),
+('004', N'Agence Moody’s', N'Organisme Externe d’Evaluation du Crédit');
+
+
+CREATE TABLE Pays (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(100)
+);
+
+INSERT INTO Pays (Code, Domaine, Descriptif) VALUES
+('004', N'Afghanistan', N'Afghanistan'),
+('710', N'Afrique du Sud', N'Afrique du Sud'),
+('248', N'Åland (Îles)', N'Åland (Îles)'),
+('008', N'Albanie', N'Albanie'),
+('012', N'Algérie', N'Algérie'),
+('276', N'Allemagne', N'Allemagne'),
+('020', N'Andorre', N'Andorre'),
+('024', N'Angola', N'Angola'),
+('660', N'Anguilla', N'Anguilla'),
+('010', N'Antarctique', N'Antarctique'),
+('028', N'Antigua-et-Barbuda', N'Antigua-et-Barbuda'),
+('682', N'Arabie saoudite', N'Arabie saoudite'),
+('032', N'Argentine', N'Argentine'),
+('051', N'Arménie', N'Arménie'),
+('533', N'Aruba', N'Aruba'),
+('036', N'Australie', N'Australie'),
+('040', N'Autriche', N'Autriche'),
+('031', N'Azerbaïdjan', N'Azerbaïdjan'),
+('044', N'Bahamas', N'Bahamas'),
+('048', N'Bahreïn', N'Bahreïn'),
+('050', N'Bangladesh', N'Bangladesh'),
+('052', N'Barbade', N'Barbade'),
+('112', N'Bélarus', N'Bélarus'),
+('056', N'Belgique', N'Belgique'),
+('084', N'Belize', N'Belize'),
+('204', N'Bénin', N'Bénin'),
+('060', N'Bermudes', N'Bermudes'),
+('064', N'Bhoutan', N'Bhoutan'),
+('068', N'Bolivie (État plurinational)', N'Bolivie (État plurinational)'),
+('535', N'Bonaire, Saint-Eustache et Saba', N'Bonaire, Saint-Eustache et Saba'),
+('070', N'Bosnie-Herzégovine', N'Bosnie-Herzégovine'),
+('072', N'Botswana', N'Botswana'),
+('074', N'Bouvet (Île)', N'Bouvet (Île)'),
+('076', N'Brésil', N'Brésil'),
+('096', N'Brunéi Darussalam', N'Brunéi Darussalam'),
+('100', N'Bulgarie', N'Bulgarie'),
+('854', N'Burkina Faso', N'Burkina Faso'),
+('108', N'Burundi', N'Burundi'),
+('132', N'Cabo Verde', N'Cabo Verde'),
+('136', N'Caïmans (Îles)', N'Caïmans (Îles)'),
+('116', N'Cambodge', N'Cambodge'),
+('120', N'Cameroun', N'Cameroun'),
+('124', N'Canada', N'Canada'),
+('152', N'Chili', N'Chili'),
+('156', N'Chine', N'Chine'),
+('162', N'Christmas (Île)', N'Christmas (Île)'),
+('196', N'Chypre', N'Chypre'),
+('166', N'Cocos (Îles)/ Keeling (Îles)', N'Cocos (Îles)/ Keeling (Îles)'),
+('170', N'Colombie', N'Colombie'),
+('174', N'Comores', N'Comores'),
+('180', N'Congo (République démocratique)', N'Congo (République démocratique)'),
+('178', N'Congo', N'Congo'),
+('184', N'Cook (Îles)', N'Cook (Îles)'),
+('410', N'Corée (République)', N'Corée (République)'),
+('408', N'Corée (République populaire démocratique)', N'Corée (République populaire démocratique)'),
+('188', N'Costa Rica', N'Costa Rica'),
+('384', N'Côte d''Ivoire', N'Côte d''Ivoire'),
+('191', N'Croatie', N'Croatie'),
+('192', N'Cuba', N'Cuba'),
+('531', N'Curaçao', N'Curaçao'),
+('208', N'Danemark', N'Danemark'),
+('262', N'Djibouti', N'Djibouti'),
+('214', N'dominicaine (République)', N'dominicaine (République)'),
+('212', N'Dominique', N'Dominique'),
+('818', N'Égypte', N'Égypte'),
+('222', N'El Salvador', N'El Salvador'),
+('784', N'Émirats arabes unis', N'Émirats arabes unis'),
+('218', N'Équateur', N'Équateur'),
+('232', N'Érythrée', N'Érythrée'),
+('724', N'Espagne', N'Espagne'),
+('233', N'Estonie', N'Estonie'),
+('840', N'États-Unis d''Amérique', N'États-Unis d''Amérique'),
+('231', N'Éthiopie', N'Éthiopie'),
+('238', N'Falkland (Îles)/Malouines (Îles)', N'Falkland (Îles)/Malouines (Îles)'),
+('234', N'Féroé (Îles)', N'Féroé (Îles)'),
+('242', N'Fidji', N'Fidji'),
+('246', N'Finlande', N'Finlande'),
+('250', N'France', N'France'),
+('266', N'Gabon', N'Gabon'),
+('270', N'Gambie', N'Gambie'),
+('268', N'Géorgie', N'Géorgie'),
+('239', N'Géorgie du Sud-et-les Îles Sandwich du Sud', N'Géorgie du Sud-et-les Îles Sandwich du Sud'),
+('288', N'Ghana', N'Ghana'),
+('292', N'Gibraltar', N'Gibraltar'),
+('300', N'Grèce', N'Grèce'),
+('308', N'Grenade', N'Grenade'),
+('304', N'Groenland', N'Groenland'),
+('312', N'Guadeloupe', N'Guadeloupe'),
+('316', N'Guam', N'Guam'),
+('320', N'Guatemala', N'Guatemala'),
+('831', N'Guernesey', N'Guernesey'),
+('324', N'Guinée', N'Guinée'),
+('226', N'Guinée équatoriale', N'Guinée équatoriale'),
+('624', N'Guinée-Bissau', N'Guinée-Bissau'),
+('328', N'Guyana', N'Guyana'),
+('254', N'Guyane française', N'Guyane française'),
+('332', N'Haïti', N'Haïti'),
+('334', N'Heard-et-Îles MacDonald (Île)', N'Heard-et-Îles MacDonald (Île)'),
+('340', N'Honduras', N'Honduras'),
+('344', N'Hong Kong', N'Hong Kong'),
+('348', N'Hongrie', N'Hongrie'),
+('833', N'Île de Man', N'Île de Man'),
+('581', N'Îles mineures éloignées des États-Unis', N'Îles mineures éloignées des États-Unis'),
+('356', N'Inde', N'Inde'),
+('086', N'Indien (Territoire britannique de l''océan)', N'Indien (Territoire britannique de l''océan)'),
+('360', N'Indonésie', N'Indonésie'),
+('364', N'Iran (République Islamique)', N'Iran (République Islamique)'),
+('368', N'Iraq', N'Iraq'),
+('372', N'Irlande', N'Irlande'),
+('352', N'Islande', N'Islande'),
+('376', N'Israël', N'Israël'),
+('380', N'Italie', N'Italie'),
+('388', N'Jamaïque', N'Jamaïque'),
+('392', N'Japon', N'Japon'),
+('832', N'Jersey', N'Jersey'),
+('400', N'Jordanie', N'Jordanie'),
+('398', N'Kazakhstan', N'Kazakhstan'),
+('404', N'Kenya', N'Kenya'),
+('417', N'Kirghizistan', N'Kirghizistan'),
+('296', N'Kiribati', N'Kiribati'),
+('414', N'Koweït', N'Koweït'),
+('418', N'Lao, République démocratique populaire', N'Lao, République démocratique populaire'),
+('426', N'Lesotho', N'Lesotho'),
+('428', N'Lettonie', N'Lettonie'),
+('422', N'Liban', N'Liban'),
+('430', N'Libéria', N'Libéria'),
+('434', N'Libye', N'Libye'),
+('438', N'Liechtenstein', N'Liechtenstein'),
+('440', N'Lituanie', N'Lituanie'),
+('442', N'Luxembourg', N'Luxembourg'),
+('446', 'Macao', 'Macao'),
+('807', 'Macédoine (ex République yougoslave)', 'Macédoine (ex République yougoslave)'),
+('450', 'Madagascar', 'Madagascar'),
+('458', 'Malaisie', 'Malaisie'),
+('454', 'Malawi', 'Malawi'),
+('462', 'Maldives', 'Maldives'),
+('466', 'Mali', 'Mali'),
+('470', 'Malte', 'Malte'),
+('580', 'Mariannes du Nord (Îles)', 'Mariannes du Nord (Îles)'),
+('504', 'Maroc', 'Maroc'),
+('584', 'Marshall (Îles)', 'Marshall (Îles)'),
+('474', 'Martinique', 'Martinique'),
+('480', 'Maurice', 'Maurice'),
+('478', 'Mauritanie', 'Mauritanie'),
+('175', 'Mayotte', 'Mayotte'),
+('484', 'Mexique', 'Mexique'),
+('583', 'Micronésie (États fédérés)', 'Micronésie (États fédérés)'),
+('498', 'Moldova, République', 'Moldova, République'),
+('492', 'Monaco', 'Monaco'),
+('496', 'Mongolie', 'Mongolie'),
+('499', 'Monténégro', 'Monténégro'),
+('500', 'Montserrat', 'Montserrat'),
+('508', 'Mozambique', 'Mozambique'),
+('104', 'Myanmar', 'Myanmar'),
+('516', 'Namibie', 'Namibie'),
+('520', 'Nauru', 'Nauru'),
+('524', 'Népal', 'Népal'),
+('558', 'Nicaragua', 'Nicaragua'),
+('562', 'Niger', 'Niger'),
+('566', 'Nigéria', 'Nigéria'),
+('570', 'Niue', 'Niue'),
+('574', 'Norfolk (Île)', 'Norfolk (Île)'),
+('578', 'Norvège', 'Norvège'),
+('540', 'Nouvelle-Calédonie', 'Nouvelle-Calédonie'),
+('554', 'Nouvelle-Zélande', 'Nouvelle-Zélande'),
+('512', 'Oman', 'Oman'),
+('800', 'Ouganda', 'Ouganda'),
+('860', 'Ouzbékistan', 'Ouzbékistan'),
+('586', 'Pakistan', 'Pakistan'),
+('585', 'Palaos', 'Palaos'),
+('275', 'Palestine', 'Palestine'),
+('591', 'Panama', 'Panama'),
+('598', 'Papouasie-Nouvelle-Guinée', 'Papouasie-Nouvelle-Guinée'),
+('600', 'Paraguay', 'Paraguay'),
+('528', 'Pays-Bas', 'Pays-Bas'),
+('604', 'Pérou', 'Pérou'),
+('608', 'Philippines', 'Philippines'),
+('612', 'Pitcairn', 'Pitcairn'),
+('616', 'Pologne', 'Pologne'),
+('258', 'Polynésie française', 'Polynésie française'),
+('630', 'Porto Rico', 'Porto Rico'),
+('620', 'Portugal', 'Portugal'),
+('634', 'Qatar', 'Qatar'),
+('760', 'Syrie', 'Syrie'),
+('140', 'République centrafricaine', 'République centrafricaine'),
+('638', 'Réunion', 'Réunion'),
+('642', 'Roumanie', 'Roumanie'),
+('826', 'Royaume-Uni de Grande-Bretagne et d''Irlande du Nord', 'Royaume-Uni de Grande-Bretagne et d''Irlande du Nord'),
+('643', 'Russie', 'Russie'),
+('646', 'Rwanda', 'Rwanda'),
+('732', 'Sahara occidental', 'Sahara occidental'),
+('652', 'Saint-Barthélemy', 'Saint-Barthélemy'),
+('659', 'Saint-Kitts-et-Nevis', 'Saint-Kitts-et-Nevis'),
+('674', 'Saint-Marin', 'Saint-Marin'),
+('663', 'Saint-Martin (partie française)', 'Saint-Martin (partie française)'),
+('534', 'Saint-Martin (partie néerlandaise)', 'Saint-Martin (partie néerlandaise)'),
+('666', 'Saint-Pierre-et-Miquelon', 'Saint-Pierre-et-Miquelon'),
+('336', 'Saint-Siège', 'Saint-Siège'),
+('670', 'Saint-Vincent-et-les Grenadines', 'Saint-Vincent-et-les Grenadines'),
+('654', 'Sainte-Hélène, Ascension et Tristan da Cunha', 'Sainte-Hélène, Ascension et Tristan da Cunha'),
+('662', 'Sainte-Lucie', 'Sainte-Lucie'),
+('090', 'Salomon (Îles)', 'Salomon (Îles)'),
+('882', 'Samoa', 'Samoa'),
+('016', 'Samoa américaines', 'Samoa américaines'),
+('678', 'Sao Tomé-et-Principe', 'Sao Tomé-et-Principe'),
+('686', 'Sénégal', 'Sénégal'),
+('688', 'Serbie', 'Serbie'),
+('690', 'Seychelles', 'Seychelles'),
+('694', 'Sierra Leone', 'Sierra Leone'),
+('702', 'Singapour', 'Singapour'),
+('703', 'Slovaquie', 'Slovaquie'),
+('705', 'Slovénie', 'Slovénie'),
+('706', 'Somalie', 'Somalie'),
+('729', 'Soudan', 'Soudan'),
+('728', 'Soudan du Sud', 'Soudan du Sud'),
+('144', 'Sri Lanka', 'Sri Lanka'),
+('752', 'Suède', 'Suède'),
+('756', 'Suisse', 'Suisse'),
+('740', 'Suriname', 'Suriname'),
+('744', 'Svalbard et l''Île Jan Mayen', 'Svalbard et l''Île Jan Mayen'),
+('748', 'Swaziland', 'Swaziland'),
+('762', 'Tadjikistan', 'Tadjikistan'),
+('158', 'Taïwan (Province de Chine)', 'Taïwan (Province de Chine)'),
+('834', 'Tanzanie, République-Unie', 'Tanzanie, République-Unie'),
+('148', 'Tchad', 'Tchad'),
+('203', 'Tchèque', 'tchèque'),
+('260', 'Terres australes françaises', 'Terres australes françaises'),
+('764', 'Thaïlande', 'Thaïlande'),
+('626', 'Timor-Leste', 'Timor-Leste'),
+('768', 'Togo', 'Togo'),
+('772', 'Tokelau', 'Tokelau'),
+('776', 'Tonga', 'Tonga'),
+('780', 'Trinité-et-Tobago', 'Trinité-et-Tobago'),
+('788', 'Tunisie', 'Tunisie'),
+('795', 'Turkménistan', 'Turkménistan'),
+('796', 'Turks-et-Caïcos (Îles)', 'Turks-et-Caïcos (Îles)'),
+('792', 'Turquie', 'Turquie'),
+('798', 'Tuvalu', 'Tuvalu'),
+('804', 'Ukraine', 'Ukraine'),
+('858', 'Uruguay', 'Uruguay'),
+('548', 'Vanuatu', 'Vanuatu'),
+('862', 'Venezuela (République bolivarienne)', 'Venezuela (République bolivarienne)'),
+('092', 'Vierges britanniques (Îles)', 'Vierges britanniques (Îles)'),
+('850', 'Vierges des États-Unis (Îles)', 'Vierges des États-Unis (Îles)'),
+('704', 'Viet Nam', 'Viet Nam'),
+('876', 'Wallis-et-Futuna', 'Wallis-et-Futuna'),
+('887', 'Yémen', 'Yémen'),
+('894', 'Zambie', 'Zambie'),
+('716', 'Zimbabwe', 'Zimbabwe');
+
+
+CREATE TABLE Type_Personne (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Type_Personne (code, domaine, descriptif)
+VALUES
+('001', N'Particuliers', N'Personnes physiques qui, pour le financement d’un bien, agissent dans un but privé en dehors de leurs activités agricoles, commerciales, professionnelles ou artisanales. Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('002', N'Entrepreneurs individuels', N'Personnes physiques exerçant une activité professionnelle non salariée bénéficiaires de crédits d’ordre professionnel. Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.'),
+('003', N'Entreprises', N'Personnes morales y compris les administrations, les groupements auxquelles elles participent et les associations. Les crédits accordés aux banques et établissements financiers ne sont pas déclarables. Cf. instruction n° 06-08 portant établissement des situations comptables mensuelles (imprimé modèle 20R) et ses annexes.');
+
+
+CREATE TABLE Forme_Juridique (
+    code CHAR(3) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Forme_Juridique (code, domaine, descriptif)
+VALUES
+('101', N'Administrations centrales', N'Administrations centrales (Ministères, Wilayas, Daïras, établissements publics à caractère administratif sous tutelle directe des ministères)'),
+('102', N'Administrations locales', N'Administrations locales (Communes, établissements publics à caractère administratif sous tutelle des collectivités locales)'),
+('103', N'Organisme de sécurité sociale et de retraite', N'Organismes de sécurité sociale et de retraite'),
+('201', N'Sociétés par action (SPA)', N'Sociétés par action (SPA)'),
+('202', N'Autres entités juridiques de nature civile ou commerciale', N'Autres entités juridiques de nature civile ou commerciale'),
+('203', N'Établissements publics industriels et commerciaux (EPIC)', N'Établissements publics industriels et commerciaux (EPIC)'),
+('204', N'Entreprises publiques économiques (EPE)', N'Entreprises publiques économiques (EPE)'),
+('301', N'Entités d''économie mixte', N'Entités d''économie mixte'),
+('401', N'Entités de droit étranger (non résidentes)', N'Entités de droit étranger (non résidentes)'),
+('501', N'Sociétés par action (SPA)', N'Sociétés par action (SPA)'),
+('502', N'Sociétés à responsabilité limitée (SARL)', N'Sociétés à responsabilité limitée (SARL)'),
+('503', N'Sociétés unipersonnelles à responsabilité limitée (EURL)', N'Sociétés unipersonnelles à responsabilité limitée (EURL)'),
+('504', N'Sociétés en commandite par action (SCA)', N'Sociétés en commandite par action (SCA)'),
+('505', N'Sociétés en commandite simple (SCS)', N'Sociétés en commandite simple (SCS)'),
+('506', N'Sociétés en nom collectif (SNC)', N'Sociétés en nom collectif (SNC)'),
+('507', N'Sociétés civiles (SC)', N'Sociétés civiles (SC)'),
+('508', N'Groupements d''intérêt économique (GIE)', N'Groupements d''intérêt économique (GIE)'),
+('601', N'Entrepreneurs individuels (EI)', N'Entrepreneurs individuels (EI)'),
+('701', N'Coopératives agricoles, artisanales, de commerce, de consommation', N'Coopératives agricoles, artisanales, de commerce, de consommation'),
+('801', N'Institutions privées sans but lucratif au service des ménages (IPSBL)', N'Institutions privées sans but lucratif au service des ménages (IPSBL)'),
+('901', N'Représentations consulaires', N'Les représentations consulaires et les entités créées en vertu d’une convention internationale sont considérées comme des organes administratifs non diplomatiques qui s’occupent sur le territoire national, des affaires économiques et commerciales');
+
+
+
+
+CREATE TABLE Activite (
+    code CHAR(2) PRIMARY KEY,
+    domaine NVARCHAR(150),
+    descriptif NVARCHAR(150)
+);
+
+INSERT INTO Activite (code, domaine, descriptif) VALUES
+('01', N'Agriculture, Chasse, Services Annexes', N'Agriculture, Chasse, Services Annexes'),
+('02', N'Sylvicultures, Exploitation Forestière, Services Annexes', N'Sylvicultures, Exploitation Forestière, Services Annexes'),
+('05', N'Pêche, Aquaculture', N'Pêche, Aquaculture'),
+('10', N'Extraction de Houille, de Lignite et de Tourbe', N'Extraction de Houille, de Lignite et de Tourbe'),
+('11', N'Extraction d''Hydrocarbures ; Services Annexes', N'Extraction d''Hydrocarbures ; Services Annexes'),
+('12', N'Extraction de Minerais d''Uranium', N'Extraction de Minerais d''Uranium'),
+('13', N'Extraction de Minerais Métalliques', N'Extraction de Minerais Métalliques'),
+('14', N'Autres Industries Extractives', N'Autres Industries Extractives'),
+('15', N'Industries Alimentaires', N'Industries Alimentaires'),
+('16', N'Industrie du Tabac', N'Industrie du Tabac'),
+('17', N'Industrie Textile', N'Industrie Textile'),
+('18', N'Industrie de l''Habillement et des Fourrures', N'Industrie de l''Habillement et des Fourrures'),
+('19', N'Industrie du Cuir et de la Chaussure', N'Industrie du Cuir et de la Chaussure'),
+('20', N'Travail du Bois et Fabrication d''Articles en Bois', N'Travail du Bois et Fabrication d''Articles en Bois'),
+('21', N'Industrie du Papier et du Carton', N'Industrie du Papier et du Carton'),
+('22', N'Édition, Imprimerie, Reproduction', N'Édition, Imprimerie, Reproduction'),
+('23', N'Cokéfaction, Raffinage, Industries Nucléaires', N'Cokéfaction, Raffinage, Industries Nucléaires'),
+('24', N'Industrie Chimique', N'Industrie Chimique'),
+('25', N'Industrie du Caoutchouc et des Plastiques', N'Industrie du Caoutchouc et des Plastiques'),
+('26', N'Fabrication d''autres Produits Minéraux non Métallique', N'Fabrication d''autres Produits Minéraux non Métallique'),
+('27', N'Métallurgie', N'Métallurgie'),
+('28', N'Travail des Métaux', N'Travail des Métaux'),
+('29', N'Fabrication de Machines et Équipements', N'Fabrication de Machines et Équipements'),
+('30', N'Fabrication de Machines de Bureau et de Matériel Informatique', N'Fabrication de Machines de Bureau et de Matériel Informatique'),
+('31', N'Fabrication de Machines et Appareils Électriques', N'Fabrication de Machines et Appareils Électriques'),
+('32', N'Fabrication d''Équipements de Radio, Télévision et Communication', N'Fabrication d''Équipements de Radio, Télévision et Communication'),
+('33', N'Fabrication d''Instruments Médicaux, Précision, Optique, d''Horlogerie', N'Fabrication d''Instruments Médicaux, Précision, Optique, d''Horlogerie'),
+('34', N'Industrie Automobile', N'Industrie Automobile'),
+('35', N'Fabrication d''Autres Matériels de Transport', N'Fabrication d''Autres Matériels de Transport'),
+('36', N'Fabrication de Meubles ; Industries Diverses', N'Fabrication de Meubles ; Industries Diverses'),
+('37', N'Récupération', N'Récupération'),
+('40', N'Production et Distribution d''Électricité, de Gaz et de Chaleur', N'Production et Distribution d''Électricité, de Gaz et de Chaleur'),
+('41', N'Captage, Traitement et Distribution d''Eau', N'Captage, Traitement et Distribution d''Eau'),
+('45', N'Construction', N'Construction'),
+('50', N'Commerce et Réparation Automobile', N'Commerce et Réparation Automobile'),
+('51', N'Commerce de Gros et Intermédiaires du Commerce', N'Commerce de Gros et Intermédiaires du Commerce'),
+('52', N'Commerce  de détail et réparation d’articles domestiques', N'Commerce  de détail et réparation d’articles domestiques'),
+('55', N'Hôtels et Restaurants', N'Hôtels et Restaurants'),
+('60', N'Transports Terrestres', N'Transports Terrestres'),
+('61', N'Transports Par Eau', N'Transports Par Eau'),
+('62', N'Transports  Aériens', N'Transports  Aériens'),
+('63', N'Services Auxiliaires des Transports', N'Services Auxiliaires des Transports'),
+('64', N'Postes et Télécommunications', N'Postes et Télécommunications'),
+('65', N'Intermédiation Financière', N'Intermédiation Financière'),
+('66', N'Assurance', N'Assurance'),
+('67', N'Auxiliaires Financiers et d''Assurance', N'Auxiliaires Financiers et d''Assurance'),
+('70', N'Activités Immobilières', N'Activités Immobilières'),
+('71', N'Location sans Opérateur', N'Location sans Opérateur'),
+('72', N'Activités Informatiques', N'Activités Informatiques'),
+('73', N'Recherche et Développement', N'Recherche et Développement'),
+('74', N'Services Fournis Principalement aux Entreprises', N'Services Fournis Principalement aux Entreprises'),
+('75', N'Administration Publique', N'Administration Publique'),
+('80', N'Éducation', N'Éducation'),
+('85', N'Santé et Action Sociale', N'Santé et Action Sociale'),
+('90', N'Assainissement, Voirie et Gestion des Déchets', N'Assainissement, Voirie et Gestion des Déchets'),
+('91', N'Activités Associatives', N'Activités Associatives'),
+('92', N'Activités Récréatives, Culturelles et Sportives', N'Activités Récréatives, Culturelles et Sportives'),
+('93', N'Services Personnels', N'Services Personnels'),
+('95', N'Services Domestiques', N'Services Domestiques'),
+('99', N'Activités Extraterritoriales', N'Activités Extraterritoriales'),
+('00', N'Sans information', N'Sans information');
+
+
+
+
+
+CREATE TABLE Profession (
+    code VARCHAR(10) PRIMARY KEY,
+    domaine VARCHAR(255),
+    descriptif TEXT
+);
+INSERT INTO Profession (code, domaine, descriptif) VALUES
+('001', 'RETRAITES', 'RETRAITES'),
+('002', 'SANS PROFESSION', 'SANS PROFESSION'),
+('003', 'ASSOCIE', 'ASSOCIES, DIRIGEANTS'),
+('111', 'MEMBRES DE L’EXECUTIF ET DES CORPS LEGISLATIFS', 'MEMBRES DE L’EXECUTIF ET DES CORPS LEGISLATIFS'),
+('112', 'CADRES SUPERIEURS DE L''ADMINISTRATION PUBLIQUE', 'CADRES SUPERIEURS DE L''ADMINISTRATION PUBLIQUE'),
+('113', 'DIRIGEANTS ET CADRES SUPERIEURS D''ORGANISATIONS POLITIQUES, SYNDICALES ET ASSOCIATIVES', 'DIRIGEANTS ET CADRES SUPERIEURS D''ORGANISATIONS POLITIQUES, SYNDICALES ET ASSOCIATIVES'),
+('121', 'DIRECTEURS', 'DIRECTEURS'),
+('122', 'CADRES DE DIRECTION SPECIALISES', 'CADRES DE DIRECTION SPECIALISES'),
+('131', 'DIRIGEANTS ET GERANTS', 'DIRIGEANTS ET GERANTS'),
+('211', 'CHERCHEURS EN SCIENCES PHYSIQUES ET ASSIMILES', 'CHERCHEURS EN SCIENCES PHYSIQUES ET ASSIMILES'),
+('212', 'CHERCHEURS EN MATHEMATIQUES ET STATISTIQUES', 'CHERCHEURS EN MATHEMATIQUES ET STATISTIQUES'),
+('213', 'SPECIALISTES ET INGENIEURS EN INFORMATIQUE', 'SPECIALISTES ET INGENIEURS EN INFORMATIQUE'),
+('214', 'AUTRES INGENIEURS, ARCHITECTES ET URBANISTES', 'AUTRES INGENIEURS, ARCHITECTES ET URBANISTES'),
+('221', 'SPECIALISTES DES SCIENCES DE LA VIE', 'SPECIALISTES DES SCIENCES DE LA VIE'),
+('222', 'MEDECINS ET MEMBRES DES PROFESSIONS ASSIMILES A LA SANTE', 'MEDECINS ET MEMBRES DES PROFESSIONS ASSIMILES A LA SANTE'),
+('231', 'PROFESSEURS D''UNIVERSITE ET D''ETABLISSEMENTS D''ENSEIGNEMENT SUPERIEUR', 'PROFESSEURS D''UNIVERSITE ET D''ETABLISSEMENTS D''ENSEIGNEMENT SUPERIEUR'),
+('232', 'PROFESSEURS DE L''ENSEIGNEMENT SECONDAIRE', 'PROFESSEURS DE L''ENSEIGNEMENT SECONDAIRE'),
+('233', 'AUTRES SPECIALISTES DE L’ENSEIGNEMENT', 'AUTRES SPECIALISTES DE L’ENSEIGNEMENT'),
+('241', 'SPECIALISTES DES FONCTIONS ADMINISTRATIVES ET COMMERCIALES DES ENTREPRISES', 'SPECIALISTES DES FONCTIONS ADMINISTRATIVES ET COMMERCIALES DES ENTREPRISES'),
+('242', 'JURISTES', 'JURISTES'),
+('243', 'ARCHIVISTES, BIBLIOTHECAIRES ET DOCUMENTALISTES', 'ARCHIVISTES, BIBLIOTHECAIRES ET DOCUMENTALISTES'),
+('244', 'SPECIALISTES DES SCIENCES SOCIALES ET HUMAINES', 'SPECIALISTES DES SCIENCES SOCIALES ET HUMAINES'),
+('245', 'ECRIVAINS ET ARTISTES CREATEURS ET EXECUTANTS', 'ECRIVAINS ET ARTISTES CREATEURS ET EXECUTANTS'),
+('246', 'MEMBRES DU CLERGE ET ASSIMILES', 'MEMBRES DU CLERGE ET ASSIMILES'),
+('311', 'TECHNICIENS DES SCIENCES PHYSIQUES ET TECHNIQUES', 'TECHNICIENS DES SCIENCES PHYSIQUES ET TECHNIQUES'),
+('312', 'AUTRES OPERATEURS DE MATERIELS INFORMATIQUES', 'AUTRES OPERATEURS DE MATERIELS INFORMATIQUES'),
+('313', 'TECHNICIENS D’APPAREILS OPTIQUES ET ELECTRONIQUES', 'TECHNICIENS D’APPAREILS OPTIQUES ET ELECTRONIQUES'),
+('314', 'TECHNICIENS DES MOYENS DE TRANSPORT AERIEN', 'TECHNICIENS DES MOYENS DE TRANSPORT AERIEN'),
+('315', 'INSPECTEURS D’IMMEUBLES, DE SECURITE, D’HYGIENE ET DE QUALITE', 'INSPECTEURS D’IMMEUBLES, DE SECURITE, D’HYGIENE ET DE QUALITE'),
+('316', 'PERSONNEL NAVIGUANT TECHNIQUE', 'PERSONNEL NAVIGUANT TECHNIQUE'),
+('321', 'TECHNICIENS ET TRAVAILLEURS ASSIMILES DES SCIENCES DE LA VIE ET DE LA SANTE', 'TECHNICIENS ET TRAVAILLEURS ASSIMILES DES SCIENCES DE LA VIE ET DE LA SANTE'),
+('322', 'PROFESSIONS INTERMEDIAIRES DE LA MEDECINE MODERNE (Sauf infirmiers)', 'PROFESSIONS INTERMEDIAIRES DE LA MEDECINE MODERNE (Sauf infirmiers)'),
+('323', 'INFIRMIERS', 'INFIRMIERS'),
+('324', 'TECHNICIENS SUPERIEURS DE SANTE (TSS) ET SAGES-FEMMES', 'TECHNICIENS SUPERIEURS DE SANTE (TSS) ET SAGES-FEMMES'),
+('325', 'PRATICIENS DE LA MEDECINE TRADITIONNELLE ET GUERISSEUR', 'PRATICIENS DE LA MEDECINE TRADITIONNELLE ET GUERISSEUR'),
+('331', 'PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT PRIMAIRE', 'PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT PRIMAIRE'),
+('332', 'PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT PREPRIMAIRE', 'PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT PREPRIMAIRE'),
+('333', 'PROFESSIONS INTERMEDIAIRES DE L''EDUCATION DES HANDICAPES', 'PROFESSIONS INTERMEDIAIRES DE L''EDUCATION DES HANDICAPES'),
+('334', 'AUTRES PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT', 'AUTRES PROFESSIONS INTERMEDIAIRES DE L''ENSEIGNEMENT'),
+('341', 'PROFESSIONS INTERMEDIAIRES DES FINANCES ET DE LA VENTE', 'PROFESSIONS INTERMEDIAIRES DES FINANCES ET DE LA VENTE'),
+('342', 'AGENTS COMMERCIAUX ET COURTIERS', 'AGENTS COMMERCIAUX ET COURTIERS'),
+('343', 'PROFESSIONS INTERMEDIAIRES DE LA GESTION ADMINISTRATIVE', 'PROFESSIONS INTERMEDIAIRES DE LA GESTION ADMINISTRATIVE'),
+('344', 'PROFESSIONS INTERMEDIAIRES DE L''ADMINISTRATION PUBLIQUE ET INSPECTEURS DE POLICE', 'PROFESSIONS INTERMEDIAIRES DE L''ADMINISTRATION PUBLIQUE ET INSPECTEURS DE POLICE'),
+('345', 'INSPECTEURS DE LA POLICE JUDICIAIRE ET DETECTIVES', 'INSPECTEURS DE LA POLICE JUDICIAIRE ET DETECTIVES'),
+('346', 'PROFESSIONS INTERMEDIAIRES DU TRAVAIL SOCIAL', 'PROFESSIONS INTERMEDIAIRES DU TRAVAIL SOCIAL'),
+('347', 'PROFESSIONS INTERMEDIAIRES DE LA CREATION ARTISTIQUE, DU SPECTACLE ET DU SPORT', 'PROFESSIONS INTERMEDIAIRES DE LA CREATION ARTISTIQUE, DU SPECTACLE ET DU SPORT'),
+('348', 'ASSISTANTS LAICS DES CULTES', 'ASSISTANTS LAICS DES CULTES'),
+('349', 'PRESENTATEURS DE RADIO ET DE TELEVISION', 'PRESENTATEURS DE RADIO ET DE TELEVISION'),
+('411', 'SECRETAIRES, DACTYLOS, STENODACTYLOS ET ASSIMILES', 'SECRETAIRES, DACTYLOS, STENODACTYLOS ET ASSIMILES'),
+('412', 'EMPLOYES DES SERVICES COMPTABLES ET FINANCIERS', 'EMPLOYES DES SERVICES COMPTABLES ET FINANCIERS'),
+('413', 'EMPLOYES DE LA GESTION DES STOCKS, DE L’ORDONNANCEMENT, AGENTS ADMINISTRATIFS DES TRANSPORTS', 'EMPLOYES DE LA GESTION DES STOCKS, DE L’ORDONNANCEMENT, AGENTS ADMINISTRATIFS DES TRANSPORTS'),
+('414', 'EMPLOYES DE LA DOCUMENTATION, DU COURRIER ET ASSIMILES', 'EMPLOYES DE LA DOCUMENTATION, DU COURRIER ET ASSIMILES'),
+('419', 'AUTRES EMPLOYES DE BUREAU', 'AUTRES EMPLOYES DE BUREAU'),
+('421', 'CAISSIERS, GUICHETIERS ET ASSIMILES', 'CAISSIERS, GUICHETIERS ET ASSIMILES'),
+('422', 'AGENTS D''ACCUEIL OU D''INFORMATION DE LA CLIENTELE', 'AGENTS D''ACCUEIL OU D''INFORMATION DE LA CLIENTELE'),
+('511', 'AGENTS D''ACCOMPAGNEMENT ET GUIDES TOURISTIQUES', 'AGENTS D''ACCOMPAGNEMENT ET GUIDES TOURISTIQUES'),
+('512', 'EMPLOYES DES SERVICES DE RESTAURATION', 'EMPLOYES DES SERVICES DE RESTAURATION'),
+('513', 'GARDES D''ENFANTS, AIDES-SOIGNANTS ET ASSIMILES', 'GARDES D''ENFANTS, AIDES-SOIGNANTS ET ASSIMILES'),
+('514', 'AUTRES PROFESSIONS DE SERVICES DIRECTS AUX PARTICULIERS', 'AUTRES PROFESSIONS DE SERVICES DIRECTS AUX PARTICULIERS'),
+('515', 'ASTROLOGUES, DISEURS DE BONNE AVENTURE ET ASSIMILES', 'ASTROLOGUES, DISEURS DE BONNE AVENTURE ET ASSIMILES'),
+('516', 'PERSONNEL DES SERVICES DE PROTECTION ET DE SECURITE', 'PERSONNEL DES SERVICES DE PROTECTION ET DE SECURITE'),
+('517', 'PERSONNEL NAVIGUANT COMMERCIAL', 'PERSONNEL NAVIGUANT COMMERCIAL'),
+('521', 'MANNEQUINS ET MODELES', 'MANNEQUINS ET MODELES'),
+('522', 'VENDEURS ET DEMONSTRATEURS DE MAGASIN', 'VENDEURS ET DEMONSTRATEURS DE MAGASIN'),
+('523', 'VENDEURS A L''ETAL ET SUR MARCHES', 'VENDEURS A L''ETAL ET SUR MARCHES'),
+('611', 'AGRICULTEURS ET TRAVAILLEURS AGRICOLES DE CULTURES DESTINEES AUX MARCHES', 'AGRICULTEURS ET TRAVAILLEURS AGRICOLES DE CULTURES DESTINEES AUX MARCHES'),
+('612', 'ELEVEURS ET TRAVAILLEURS AGRICOLES DE L''ELEVAGE DESTINE AUX MARCHES ET ASSIMILES', 'ELEVEURS ET TRAVAILLEURS AGRICOLES DE L''ELEVAGE DESTINE AUX MARCHES ET ASSIMILES'),
+('613', 'AGRICULTEURS ET TRAVAILLEURS AGRICOLES DE POLYCULTURE ET D''ELEVAGE DESTINES AUX MARCHES', 'AGRICULTEURS ET TRAVAILLEURS AGRICOLES DE POLYCULTURE ET D''ELEVAGE DESTINES AUX MARCHES'),
+('614', 'PROFESSIONS DU FORESTAGE ET ASSIMILEES', 'PROFESSIONS DU FORESTAGE ET ASSIMILEES'),
+('615', 'PATRONS, MARINS PECHEURS, CHASSEURS ET TRAPPEURS', 'PATRONS, MARINS PECHEURS, CHASSEURS ET TRAPPEURS'),
+('621', 'AGRICULTEURS ET TRAVAILLEURS DE L''AGRICULTURE ET DELA PECHE DE SUBSISTANCE', 'AGRICULTEURS ET TRAVAILLEURS DE L''AGRICULTURE ET DELA PECHE DE SUBSISTANCE'),
+('711', 'MINEURS, CARRIERS, BOUTEFEUX ET TAILLEURS DE PIERRE', 'MINEURS, CARRIERS, BOUTEFEUX ET TAILLEURS DE PIERRE'),
+('712', 'ARTISANS ET OUVRIERS DU GROS OEUVRE DU BATIMENT', 'ARTISANS ET OUVRIERS DU GROS OEUVRE DU BATIMENT'),
+('713', 'ARTISANS ET OUVRIERS DU SECOND OEUVRE DU BATIMENT (FINITIONS)', 'ARTISANS ET OUVRIERS DU SECOND OEUVRE DU BATIMENT (FINITIONS)'),
+('714', 'ARTISANS ET OUVRIERS DE LA PEINTURE ET DU RAVALEMENT DE BATIMENTS', 'ARTISANS ET OUVRIERS DE LA PEINTURE ET DU RAVALEMENT DE BATIMENTS'),
+('721', 'MOULEURS DE FONDERIE, SOUDEURS, TOLIERS- CHAUDRONNIERS, MONTEURS DE CHARPENTES METALLIQUES ET PROFESSIONS ASSIMILEES', 'MOULEURS DE FONDERIE, SOUDEURS, TOLIERS- CHAUDRONNIERS, MONTEURS DE CHARPENTES METALLIQUES ET PROFESSIONS ASSIMILEES'),
+('722', 'FORGERONS, OUTILLEURS ET PROFESSIONS ASSIMILEES', 'FORGERONS, OUTILLEURS ET PROFESSIONS ASSIMILEES'),
+('723', 'ARTISANS ET OUVRIERS DE LA MECANIQUE', 'ARTISANS ET OUVRIERS DE LA MECANIQUE'),
+('724', 'MECANICIENS ET AJUSTEURS D''APPAREILS ELECTRIQUES ET ELECTRONIQUES', 'MECANICIENS ET AJUSTEURS D''APPAREILS ELECTRIQUES ET ELECTRONIQUES'),
+('731', 'TRAVAILLEURS DE PRECISION SUR METAUX ET MATERIAUX SIMILAIRES', 'TRAVAILLEURS DE PRECISION SUR METAUX ET MATERIAUX SIMILAIRES'),
+('732', 'POTIERS, SOUFFLEURS DE VERRE ET TRAVAILLEURS ASSIMILES', 'POTIERS, SOUFFLEURS DE VERRE ET TRAVAILLEURS ASSIMILES'),
+('733', 'ARTISANS ET OUVRIERS DU TRAVAIL A LA MAIN SUR BOIS, SUR TEXTILE, SUR CUIR ET SUR DES MATERIAUX SIMILAIRES', 'ARTISANS ET OUVRIERS DU TRAVAIL A LA MAIN SUR BOIS, SUR TEXTILE, SUR CUIR ET SUR DES MATERIAUX SIMILAIRES'),
+('734', 'ARTISANS ET OUVRIERS DE L''IMPRIMERIE ET TRAVAILLEURS ASSIMILES', 'ARTISANS ET OUVRIERS DE L''IMPRIMERIE ET TRAVAILLEURS ASSIMILES'),
+('741', 'ARTISANS ET OUVRIERS DE L''ALIMENTATION', 'ARTISANS ET OUVRIERS DE L''ALIMENTATION'),
+('742', 'EBENISTES, MENUISIERS ET OUVRIERS DU TRAITEMENT DU BOIS ET PROFESSIONS ASSIMILEES', 'EBENISTES, MENUISIERS ET OUVRIERS DU TRAITEMENT DU BOIS ET PROFESSIONS ASSIMILEES'),
+('743', 'ARTISANS ET OUVRIERS DES METIERS DU TEXTILE ET DE L''HABILLEMENT', 'ARTISANS ET OUVRIERS DES METIERS DU TEXTILE ET DE L''HABILLEMENT'),
+('744', 'ARTISANS ET OUVRIERS DU TRAVAIL DU CUIR, DES PEAUX ET DE LA CHAUSSURE', 'ARTISANS ET OUVRIERS DU TRAVAIL DU CUIR, DES PEAUX ET DE LA CHAUSSURE'),('811', 'CONDUCTEURS D''INSTALLATIONS D''EXTRACTION ET DE TRAITEMENTS DES MINERAUX', 'CONDUCTEURS D''INSTALLATIONS D''EXTRACTION ET DE TRAITEMENTS DES MINERAUX'),
+('812', 'CONDUCTEURS D''INSTALLATION DE TRANSFORMATION DES METAUX', 'CONDUCTEURS D''INSTALLATION DE TRANSFORMATION DES METAUX'),
+('813', 'CONDUCTEURS D''INSTALLATIONS DE VERRERIE ET DE CERAMIQUE ET DE MATERIAUX SIMILAIRES', 'CONDUCTEURS D''INSTALLATIONS DE VERRERIE ET DE CERAMIQUE ET DE MATERIAUX SIMILAIRES'),
+('814', 'CONDUCTEURS D''INSTALLATIONS DE TRANSFORMATION DU BOIS ET DE FABRICATION DE PAPIER', 'CONDUCTEURS D''INSTALLATIONS DE TRANSFORMATION DU BOIS ET DE FABRICATION DE PAPIER'),
+('815', 'CONDUCTEURS DE FOURS ET D''INSTALLATIONS CHIMIQUES', 'CONDUCTEURS DE FOURS ET D''INSTALLATIONS CHIMIQUES'),
+('816', 'CONDUCTEURS D''INSTALLATIONS DE PRODUCTION D''ENERGIE ET D''INSTALLATIONS ASSIMILES', 'CONDUCTEURS D''INSTALLATIONS DE PRODUCTION D''ENERGIE ET D''INSTALLATIONS ASSIMILES'),
+('817', 'CONDUCTEURS DE CHAINES DE MONTAGE AUTOMATIQUES ET DE ROBOTS INDUSTRIELS', 'CONDUCTEURS DE CHAINES DE MONTAGE AUTOMATIQUES ET DE ROBOTS INDUSTRIELS'),
+('821', 'CONDUCTEURS DE MACHINES-OUTILS, DE BETONNIERES ET DE MACHINES ASSIMILEES', 'CONDUCTEURS DE MACHINES-OUTILS, DE BETONNIERES ET DE MACHINES ASSIMILEES'),
+('822', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION DE PRODUITS CHIMIQUES', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION DE PRODUITS CHIMIQUES'),
+('823', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION D''ARTICLES EN CAOUTCHOUC ET EN MATIERES PLASTIQUES', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION D''ARTICLES EN CAOUTCHOUC ET EN MATIERES PLASTIQUES'),
+('824', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION D''ARTICLES EN BOIS', 'CONDUCTEURS DE MACHINES POUR LA FABRICATION D''ARTICLES EN BOIS'),
+('825', 'CONDUCTEURS DE MACHINES D''IMPRIMERIE ET DU FACONNAGE DU PAPIER-CARTON', 'CONDUCTEURS DE MACHINES D''IMPRIMERIE ET DU FACONNAGE DU PAPIER-CARTON'),
+('826', 'CONDUCTEURS DE MACHINES TEXTILES', 'CONDUCTEURS DE MACHINES TEXTILES'),
+('827', 'CONDUCTEURS DE MACHINES DES INDUSTRIES AGRO-ALIMENTAIRES', 'CONDUCTEURS DE MACHINES DES INDUSTRIES AGRO-ALIMENTAIRES'),
+('828', 'OUVRIERS DE L''ASSEMBLAGE', 'OUVRIERS DE L''ASSEMBLAGE'),
+('829', 'AUTRES CONDUCTEURS DE MACHINES FIXES ET OUVRIERS DE L''ASSEMBLAGE', 'AUTRES CONDUCTEURS DE MACHINES FIXES ET OUVRIERS DE L''ASSEMBLAGE'),
+('831', 'CONDUCTEURS DE LOCOMOTIVES ET AUTRES TRAVAILLEURS DES MANOEUVRES DES VEHICULES SUR RAIL', 'CONDUCTEURS DE LOCOMOTIVES ET AUTRES TRAVAILLEURS DES MANOEUVRES DES VEHICULES SUR RAIL'),
+('832', 'CONDUCTEURS DE VEHICULES A MOTEUR', 'CONDUCTEURS DE VEHICULES A MOTEUR'),
+('833', 'CONDUCTEURS DE MACHINES AGRICOLES, DE TERRASSEMENT ET D''AUTRES ENGINS MOBILES DE TERRASSEMENT', 'CONDUCTEURS DE MACHINES AGRICOLES, DE TERRASSEMENT ET D''AUTRES ENGINS MOBILES DE TERRASSEMENT'),
+('834', 'MATELOTS DE PONT ET TRAVAILLEURS ASSIMILES', 'MATELOTS DE PONT ET TRAVAILLEURS ASSIMILES'),
+('911', 'VENDEURS AMBULANTS ET ASSIMILES', 'VENDEURS AMBULANTS ET ASSIMILES'),
+('912', 'CIREURS DE CHAUSSURES ET AUTRES PETITS METIERS DES RUES', 'CIREURS DE CHAUSSURES ET AUTRES PETITS METIERS DES RUES'),
+('913', 'AIDES DE MAISON, PERSONNEL DE NETTOYAGE ET TRAVAILLEURS ASSIMILES', 'AIDES DE MAISON, PERSONNEL DE NETTOYAGE ET TRAVAILLEURS ASSIMILES'),
+('914', 'OUVRIERS D''ENTRETIEN DE BATIMENTS ET LAVEURS DE VITRES', 'OUVRIERS D''ENTRETIEN DE BATIMENTS ET LAVEURS DE VITRES'),
+('915', 'COURSIERS, PORTEURS ET GARDIENS ET ASSIMILES', 'COURSIERS, PORTEURS ET GARDIENS ET ASSIMILES'),
+('916', 'EBOUEURS, BALAYEURS ET ASSIMILES', 'EBOUEURS, BALAYEURS ET ASSIMILES'),
+('921', 'OUVRIERS NON QUALIFIES DE L''AGRICULTURE, DE LA PECHE ET DU FORESTAGE ET MANOEUVRES ASSIMILES', 'OUVRIERS NON QUALIFIES DE L''AGRICULTURE, DE LA PECHE ET DU FORESTAGE ET MANOEUVRES ASSIMILES'),
+('931', 'MANOEUVRES ET MANUTENTIONNAIRES DES MINES ET DE LA CONSTRUCTION', 'MANOEUVRES ET MANUTENTIONNAIRES DES MINES ET DE LA CONSTRUCTION'),
+('932', 'MANOEUVRES ET MANUTENTIONNAIRES DES INDUSTRIES MANUFACTURIERES', 'MANOEUVRES ET MANUTENTIONNAIRES DES INDUSTRIES MANUFACTURIERES'),
+('933', 'MANOEUVRES ET MANUTENTIONNAIRES DES TRANSPORTS', 'MANOEUVRES ET MANUTENTIONNAIRES DES TRANSPORTS');
+
+CREATE TABLE Fonctions_Dirigeant (
+    code VARCHAR(10) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Fonctions_Dirigeant (code, domaine, descriptif)
+VALUES
+('001', 'Président du conseil d''administration', 'Président du conseil d''administration'),
+('002', 'Membre du Conseil d''administration ou du Directoire', 'Membre du Conseil d''administration ou du Directoire'),
+('003', 'Membre du Conseil de surveillance', 'Membre du Conseil de surveillance'),
+('004', 'Directeur général', 'Directeur général'),
+('005', 'Gérant', 'Gérant (SARL, EURL, SNC, SCS, SCA, SCI et coopératives)'),
+('006', 'Associé en nom', 'Associé en nom'),
+('007', 'Associé commandité', 'Associé commandité'),
+('008', 'Administrateur d''un  Groupement d''Intérêt Économique', 'Administrateur d''un  Groupement d''Intérêt Économique');
+
+
+CREATE TABLE Banque (
+    code VARCHAR(10) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Banques (code, domaine, descriptif) VALUES
+('002', 'Banque Extérieure d’Algérie', 'Banque Extérieure d’Algérie'),
+('001', 'Banque Nationale d’Algérie', 'Banque Nationale d’Algérie'),
+('004', 'Crédit Populaire d’Algérie', 'Crédit Populaire d’Algérie'),
+('005', 'Banque de Développement Local', 'Banque de Développement Local'),
+('003', 'Banque de l’Agriculture et du Développement Rural', 'Banque de l’Agriculture et du Développement Rural'),
+('011', 'Caisse Nationale d’Epargne et de Prévoyance (Banque)', 'Caisse Nationale d’Epargne et de Prévoyance (Banque)'),
+('006', 'Banque Al-Baraka d’Algérie', 'Banque Al-Baraka d’Algérie'),
+('012', 'Citybank N.A Algeria «  Succursale de banque »', 'Citybank N.A Algeria «  Succursale de banque »'),
+('014', 'Arab Banking Corporation-Algeria', 'Arab Banking Corporation-Algeria'),
+('020', 'Natixis - Algérie', 'Natixis - Algérie'),
+('021', 'Société Générale - Algérie', 'Société Générale - Algérie'),
+('026', 'Arab Bank Plc Algeria « succursale de banque »', 'Arab Bank Plc Algeria « succursale de banque »'),
+('027', 'BNP- Paribas Al-Djazair', 'BNP- Paribas Al-Djazair'),
+('029', 'Trust Bank - Algeria', 'Trust Bank - Algeria'),
+('031', 'The Housing Bank for Trade & Finance Algeria', 'The Housing Bank for Trade & Finance Algeria'),
+('032', 'Gulf Bank Algérie', 'Gulf Bank Algérie'),
+('035', 'Fransabank Al-Djazair', 'Fransabank Al-Djazair'),
+('036', 'Crédit Agricole Corporate et Investissement Bank - Algérie', 'Crédit Agricole Corporate et Investissement Bank -Algérie'),
+('037', 'H.S.B.C -  Algeria «  Succursale »', 'H.S.B.C - Algeria «  Succursale de banque »'),
+('038', 'Al Salam Bank - Algeria', 'Al Salam Bank - Algeria'),
+('017', 'Société de Refinancement Hypothécaire', 'Société de Refinancement Hypothécaire'),
+('025', 'Sofinance- SPA', 'Société Financière d’Investissement, de Participation et de Placement – SPA «  Sofinance- SPA »'),
+('028', 'Arab Leasing Corporation', 'Arab Leasing Corporation'),
+('034', 'Maghreb Leasing Algérie', 'Maghreb Leasing Algérie'),
+('033', 'Cétélem – Algérie, SPA', 'Cétélem – Algérie, SPA'),
+('010', 'Caisse Nationale de Mutualité Agricole', 'Caisse Nationale de Mutualité Agricole « Établissement Financier »'),
+('039', 'Société Nationale de Leasing – SPA', 'Société Nationale de Leasing – SPA'),
+('040', 'Ijar Leasing Algérie – SPA', 'Ijar Leasing Algérie – SPA'),
+('041', 'El Djazair Idjar – SPA', 'El Djazair Idjar – SPA'),
+('111', 'Banque d’Algérie', 'Banque d’Algérie');
+
+
+
+CREATE TABLE Duree_Credit (
+    code VARCHAR(10) PRIMARY KEY,
+    domaine NVARCHAR(100),
+    descriptif NVARCHAR(MAX)
+);
+
+INSERT INTO Duree_Credit (code, domaine, descriptif) VALUES
+('000', '0 jour', '0 jour (Crédit remboursé)'),
+('001', 'Jusqu''à 90 jours', 'Très Court terme : Jusqu''à 90 jours'),
+('002', 'Plus de 90 jours jusqu''à 180 jours', 'Court terme : Plus de 90 jours jusqu''à 180 jours'),
+('003', 'Plus de 180 jours à 1 an', 'Court terme : Plus de 180 jours à 1 an'),
+('004', 'Plus de 1 an à 7 ans', 'Moyen terme : Plus de 1 à 7 ans'),
+('005', 'Plus de 7 jusqu''à 10 ans', 'Long terme : Plus de 7 jusqu''à 10 ans'),
+('006', 'Plus de 10 jusqu''à 20 ans', 'Long terme : Plus de 10 jusqu''à 20 ans'),
+('007', 'Plus de 20 à 25 ans', 'Long terme : Plus de 20 à 25 ans'),
+('008', 'Plus de 25 à 30 ans', 'Long terme : Plus de 25 à 30 ans'),
+('009', 'Plus de 30 ans', 'Long terme : Plus de 30 ans'),
+('900', 'Sans durée spécifique', 'Sans durée spécifique (plafond)'),
+('999', 'Sans information Durée indéterminée', 'Sans information Durée indéterminée');
+
+
+CREATE TABLE Monnaie (
+    code_monnaie VARCHAR(10) PRIMARY KEY,
+    devise VARCHAR(50),
+    entite VARCHAR(50)
+);
+
+INSERT INTO Monnaie (code_monnaie, devise, entite) VALUES
+('DZD', 'Dinar Algérien', 'Dinar Algérien'),
+('DVS', 'Monnaie étrangère', 'Monnaie étrangère');
+
+
+

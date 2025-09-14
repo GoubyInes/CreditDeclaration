@@ -1,0 +1,5 @@
+{"timestamp":"2025-04-30T14:32:26.519445","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-04-30T14:32:26.519944","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-04-30T14:32:26.542264","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-04-30T14:32:27.192255Z","level":"info","event":"✅ File content preview:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-04-30T14:32:27.193071Z","level":"info","event":"161|000001|MOHAMED                                           |HAMMOUDI                                          |22/05/1988|0|00719|N|1|1|012|16|001|BRAHIM MALIK                                      |","chan":"stdout","logger":"task"}

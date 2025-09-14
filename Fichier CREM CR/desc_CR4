@@ -1,0 +1,21 @@
+Descriptions : fichier CREM type personnes morales - Societes
+Nom du fichier en sortie : zzzaammCR4 (indice agence + Annee + Mois + CR1)
+
+Code agence              : Z(3)
+Separateur               : |
+Radical client           : Z(6)
+Separateur               : |
+Numero sequentiel        : Z(3)
+Separateur               : |
+NIF                      : W(20)
+Separateur               : |
+Pourcentage participation: (Z3.Z2)
+Separateur               : |
+Date prise particiaption : JJ/MM/AAAA
+Separateur               : |
+Designation sociale      : W(100)
+Separateur               : |
+Code de l'activite       : Z(3)  (Voir referentiel B.A : TG095)
+Separateur               : |
+Forme juridique          : Z(3)  (Voir referentiel B.A : TG213)
+----------------------------------------------------------------------------------------------

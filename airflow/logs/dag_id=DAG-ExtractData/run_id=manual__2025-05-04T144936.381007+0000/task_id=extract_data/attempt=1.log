@@ -1,0 +1,26 @@
+{"timestamp":"2025-05-04T14:49:38.444948","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-04T14:49:38.445437","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-04T14:49:38.484612","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-04T14:49:38.580767","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-05-04T14:49:38.672431Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.672882Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.677745Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.681632Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.715770Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.716429Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.716810Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.765735Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.766159Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.766609Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.825554Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.858125Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.891389Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.969635Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.006934Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.072740Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.073199Z","level":"info","event":"nombre de colonnes incorrect : 31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.073707Z","level":"info","event":"1 record inserted.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.074294Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.075084Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:39.075724Z","level":"info","event":"⚠️ Ligne ignorée : nombre de colonnes incorrect : 1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-04T14:49:38.708837","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

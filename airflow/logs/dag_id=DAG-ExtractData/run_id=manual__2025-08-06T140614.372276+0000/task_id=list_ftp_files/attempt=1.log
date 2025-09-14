@@ -1,0 +1,65 @@
+{"timestamp":"2025-08-06T14:06:16.767690","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-08-06T14:06:16.768304","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/extractData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-08-06T14:06:16.928099","level":"info","event":"Server : achour_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:16.928207","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:16.929375","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:16.966920","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-08-06T14:06:16.967195","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-08-06T14:06:16.970704","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.135918","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.141116","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.147713","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.148152","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-08-06T14:06:17.151261","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.319689","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.325461","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.332167","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.332680","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-08-06T14:06:17.335890","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.583366","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-08-06T14:06:17.595636","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.877420","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-08-06T14:06:17.877981","level":"warning","event":"File not found 1611124SCL","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878117","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878290","level":"warning","event":"File not found 1611124SGL","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878360","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878474","level":"warning","event":"File not found 1611124OGL","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878529","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878769","level":"warning","event":"File not found 1611124CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878865","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.878971","level":"warning","event":"File not found 1611124CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879020","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879105","level":"warning","event":"File not found 1611124CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879184","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879315","level":"warning","event":"File not found 1611124CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879399","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879516","level":"warning","event":"File not found 1611124CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879679","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879840","level":"warning","event":"File not found 1611124CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.879935","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.880016","level":"info","event":"Server : beb_ezzouar_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.880094","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.880315","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:17.941703","level":"error","event":"Cannot connect to beb_ezzouar_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.941924","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.942070","level":"info","event":"Server : oran_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.942181","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.942840","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:17.957003","level":"error","event":"Cannot connect to oran_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.957184","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.957285","level":"info","event":"Server : setif_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.957354","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.957579","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:17.967924","level":"error","event":"Cannot connect to setif_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.968102","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.968228","level":"info","event":"Server : constantine_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.968293","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:17.968556","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:18.075788","level":"error","event":"Cannot connect to constantine_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.076054","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.076282","level":"info","event":"Server : skikda_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.076430","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.076912","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-08-06T14:06:18.091056","level":"error","event":"Cannot connect to skikda_agency","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.091304","level":"info","event":"----------------------------------------------------------------------------------------","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-08-06T14:06:18.092144","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

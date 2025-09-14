@@ -1,0 +1,41 @@
+{"timestamp":"2025-06-16T14:38:27.177917","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-16T14:38:27.178753","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/loadData.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-16T14:38:27.219410","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-06-16T14:38:27.992375","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-06-16T14:38:28.023427","level":"error","event":"🚫 File not found: 1611606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.023883","level":"error","event":"🚫 File not found: 1611606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.024178","level":"error","event":"🚫 File not found: 1611606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.024492","level":"error","event":"🚫 File not found: 1611606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.024752","level":"error","event":"🚫 File not found: 1611606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.025067","level":"error","event":"🚫 File not found: 1611606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.025515","level":"error","event":"🚫 File not found: 1621606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.025873","level":"error","event":"🚫 File not found: 1621606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.026167","level":"error","event":"🚫 File not found: 1621606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.026547","level":"error","event":"🚫 File not found: 1621606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.026846","level":"error","event":"🚫 File not found: 1621606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.027226","level":"error","event":"🚫 File not found: 1621606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.027699","level":"error","event":"🚫 File not found: 1631606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.028026","level":"error","event":"🚫 File not found: 1631606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.028438","level":"error","event":"🚫 File not found: 1631606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.029027","level":"error","event":"🚫 File not found: 1631606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.029509","level":"error","event":"🚫 File not found: 1631606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.029935","level":"error","event":"🚫 File not found: 1631606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.030382","level":"error","event":"🚫 File not found: 1641606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.030726","level":"error","event":"🚫 File not found: 1641606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.031150","level":"error","event":"🚫 File not found: 1641606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.031487","level":"error","event":"🚫 File not found: 1641606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.031945","level":"error","event":"🚫 File not found: 1641606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.032271","level":"error","event":"🚫 File not found: 1641606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.032591","level":"error","event":"🚫 File not found: 1651606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.032967","level":"error","event":"🚫 File not found: 1651606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.033263","level":"error","event":"🚫 File not found: 1651606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.033575","level":"error","event":"🚫 File not found: 1651606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.033862","level":"error","event":"🚫 File not found: 1651606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.034259","level":"error","event":"🚫 File not found: 1651606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.034802","level":"error","event":"🚫 File not found: 1661606CR1","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.035169","level":"error","event":"🚫 File not found: 1661606CR2","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.035770","level":"error","event":"🚫 File not found: 1661606CR3","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.036132","level":"error","event":"🚫 File not found: 1661606CR4","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.036860","level":"error","event":"🚫 File not found: 1661606CR5","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.038121","level":"error","event":"🚫 File not found: 1661606CR6","logger":"airflow.utils.log.logging_mixin.LoggingMixin"}
+{"timestamp":"2025-06-16T14:38:28.040547","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

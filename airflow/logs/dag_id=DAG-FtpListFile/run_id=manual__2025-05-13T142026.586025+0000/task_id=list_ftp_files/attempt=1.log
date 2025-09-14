@@ -1,0 +1,11 @@
+{"timestamp":"2025-05-13T14:20:27.549519","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-13T14:20:27.550049","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/getFile.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-13T14:20:27.689129","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-13T14:20:27.760333","level":"info","event":"Connection Retrieved 'achour_agency'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-05-13T14:20:27.760905","level":"warning","event":"No Host Key Verification. This won't protect against Man-In-The-Middle attacks","logger":"airflow.task.hooks.airflow.providers.sftp.hooks.sftp.SFTPHook"}
+{"timestamp":"2025-05-13T14:20:27.768397","level":"info","event":"Connected (version 1.99, client OpenSSH_3.7.1p2)","logger":"paramiko.transport"}
+{"timestamp":"2025-05-13T14:20:27.937027","level":"info","event":"Authentication (password) successful!","logger":"paramiko.transport"}
+{"timestamp":"2025-05-13T14:20:27.943748","level":"info","event":"[chan 0] Opened sftp connection (server version 3)","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-13T14:20:27.951063","level":"info","event":"[chan 0] sftp session closed.","logger":"paramiko.transport.sftp"}
+{"timestamp":"2025-05-13T14:20:27.951701Z","level":"info","event":"Fichiers sur le serveur : ['.io', '.mozilla', '.scoadmin.pref', '.ssh', 'CD-ROM_1', 'Disk_A', 'OpenServer', 'bck', 'bin', 'ccs', 'config', 'core.1011', 'dev', 'etc', 'export', 'home', 'home2', 'home21', 'home22', 'home23', 'home31', 'home32', 'install', 'installr', 'lbin', 'lib', 'lost+found', 'mnt', 'opt', 'pmd', 'print', 'proc', 'save', 'sbin', 'secret', 'share', 'shlib', 'stand', 'system', 'tmp', 'u95', 'unix', 'usr', 'var']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-13T14:20:27.952045","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

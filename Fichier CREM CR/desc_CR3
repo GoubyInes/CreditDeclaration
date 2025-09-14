@@ -1,0 +1,73 @@
+Descriptions : fichier CREM type Personnes morales
+Nom du fichier en sortie : zzzaammCR3 (indice agence + Annee + Mois + CR1)
+
+Code agence              : Z(3)
+Separateur               : |
+Radical client           : Z(6)
+Separateur               : |
+date de creation         : JJ/MM/AAAA
+Separateur               : |
+Sigle                    : W(20)
+Separateur               : |
+Adresse activite L1 + L2 : W(100)
+Separateur               : |
+Wilaya activite          : Z(2)  (Voir referentiel B.A : TG220)
+Separateur               : |
+Commune activite         : Z(3)  (Voir referentiel B.A : TG221)
+Separateur               : |
+Adresse siege    L1 + L2 : W(100)
+Separateur               : |
+Wilaya siege             : Z(2)  (Voir referentiel B.A : TG220)
+Separateur               : |
+Commune siege            : Z(3)  (Voir referentiel B.A : TG221)
+Separateur               : |
+Forme juridique          : Z(3)  (Voir referentiel B.A : TG213)
+Separateur               : |
+Code activite principale : Z(3)  (Voir referentiel B.A : TG095)
+Separateur               : |
+Entite publique          : Z(3)  (Voir referentiel B.A : TG096)
+Separateur               : |
+Effectifs                : Z(18)
+Separateur               : |
+Valeur ajoutee           : Z(18)
+Separateur               : |
+Chiffre d'affaire        : Z(18)
+Separateur               : |
+Resultat net             : Z(18)
+Separateur               : |
+Total bilan              : Z(18)
+Separateur               : |
+Total actif non courant  : Z(18)
+Separateur               : |
+Capital emis             : Z(18)
+Separateur               : |
+Reserves                 : Z(18)
+Separateur               : |
+Report a nouveau         : Z(18) +/-
+Separateur               : |
+Capitaux propres         : Z(18) +/-
+Separateur               : |
+Emprunt+Dette financiere : Z(18)
+Separateur               : |
+Excedent brut d'exploit. : Z(18)
+Separateur               : |
+Resultat financier       : Z(18) +/-
+Separateur               : |
+Date etablissement bilan : JJ/MM/AAAA
+Separateur               : |
+Type de document         : Z(3)  (Voir referentiel B.A : TG049)
+Separateur               : |
+Numero du document       : W(20)
+Separateur               : |
+Pays d'emission          : Z(3)  (Voir referentiel B.A : TG006)
+Separateur               : |
+Entite emitrice          : W(200)
+Separateur               : |
+Date d'expiration        : JJ/MM/AAAA
+Separateur               : |
+NIF                      : W(20)
+Separateur               : |
+Cle Intermediaire        : W(26)
+Separateur               : |
+Cle Onomastique          : W(36)
+----------------------------------------------------------------------------------------------

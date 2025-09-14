@@ -1,0 +1,65 @@
+Descriptions : fichier CREM type personnes physique
+Nom du fichier en sortie : zzzaammCR1 (indice agence + Annee + Mois + CR1)
+
+Code agence              : Z(3)
+Separateur               : |
+Radical client           : Z(6)
+Separateur               : |
+Prenom du client         : W(50)
+Separateur               : |
+Nom du client            : W(50)
+Separateur               : |
+date de naissance        : JJ/MM/AAAA
+Separateur               : |
+Presume ?                : Z     (1=OUI / 0=NON)
+Separateur               : |
+Numero acte de naissance : Z(5)
+Separateur               : |
+Numero acte de naissance : W     (N=NORMAL, B=BIS, T=TER, Q=QUATER)
+Separateur               : |
+Sexe                     : Z     (1=MASCULIN, 2=FEMININ)
+Separateur               : |
+Nationalite              : Z     (1=ALGERIENNE, 2=ETRANGERE)
+Separateur               : |
+Pays de naissance        : Z(3)  (Voir referentiel B.A : TG006)
+Separateur               : |
+Wilaya de naissance      : Z(2)  (Voir referentiel B.A : TG220)
+Separateur               : |
+Commune de naissance     : Z(3)  (Voir referentiel B.A : TG221)
+Separateur               : |
+Prenom du pere           : W(50)
+Separateur               : |
+Prenom de la mere        : W(50)
+Separateur               : |
+Nom de la mere           : W(50)
+Separateur               : |
+Etat civil               : Z     (Voir referentiel B.A : TG210)
+Separateur               : |
+Nom du conjoint          : W(50)
+Separateur               : |
+Profession               : Z(3)  (Voir referentiel B.A : TG211)
+Separateur               : |
+Revenus                  : Z(18)
+Separateur               : |
+Adresse L1 + L2          : W(100)
+Separateur               : |
+Adresse code Wilaya      : Z(2)
+Separateur               : |
+Adresse code Commune     : Z(3)
+Separateur               : |
+Type de document         : Z(3)  (Voir referentiel B.A : TG049)
+Separateur               : |
+Numero du document       : W(20)
+Separateur               : |
+Pays d'emission          : Z(3)  (Voir referentiel B.A : TG006)
+Separateur               : |
+Entite emitrice          : W(200)
+Separateur               : |
+Date d'expiration        : JJ/MM/AAAA
+Separateur               : |
+NIF                      : W(20)
+Separateur               : |
+Cle Intermediaire        : W(26)
+Separateur               : |
+Cle Onomastique          : W(36)
+----------------------------------------------------------------------------------------------

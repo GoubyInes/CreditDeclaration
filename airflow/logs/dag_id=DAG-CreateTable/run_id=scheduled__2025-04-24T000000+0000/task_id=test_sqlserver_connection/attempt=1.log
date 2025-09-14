@@ -1,0 +1,7 @@
+{"timestamp":"2025-04-30T09:48:31.888772","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-04-30T09:48:31.889326","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/createTable.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-04-30T09:48:31.935695","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-04-30T09:48:32.005391","level":"info","event":"Connection Retrieved 'sqlserver'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-04-30T09:48:32.057192","level":"info","event":"Running statement: SELECT 1, parameters: None","logger":"airflow.task.hooks.airflow.providers.microsoft.mssql.hooks.mssql.MsSqlHook"}
+{"timestamp":"2025-04-30T09:48:32.064535Z","level":"info","event":"✅ MSSQL connection successful. Result: (1,)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-04-30T09:48:32.065750","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
