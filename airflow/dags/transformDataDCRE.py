@@ -77,51 +77,51 @@ def create_xml():
           s11=ET.SubElement(s2,"s11") #Liste des crédits
           for i in [0,1]:
             s20=ET.SubElement(s11,"s20") 
-            s20.set("s102",'') #TG001 : Niveau de Responsabilité
-            s20.set("s129",'') #Identifiant du Plafond (null possible)
-            s20.set("s128",'') #Numéro du contrat de crédit
-            s20.set("s111",'') #TG252 : Code monnaies
-            s20.set("s113",'') #Numéro d’identité bancaire (null possible)
-            s20.set("s108",'') #TG006 : Code Pays de l'agence
-            s20.set("s114",'') #Code agence de l’établissement déclarant
-            s20.set("s131",'') #TG220 : Code Wilaya du bénéficiaire de crédit
-            s20.set("s115",'') #TG095 : Code d’activité (null possible)
-            s20.set("s107",'') #Type de crédit TG004
-            s20.set("s103",'') #Situation du débiteur / crédit TG002
-            s20.set("s104",'') #TG026 : Classe de retard du crédit
-            s20.set("s105",'') #TG251 : Durée de crédit initiale
-            s20.set("s106",'') #TG251 : Durée de crédit restante
-            s20.set("s117",'') #Crédit accordé
-            s20.set("s101",'') #Encours hors intérêts courus
-            s20.set("s119",'') #Coût total du crédit
-            s20.set("s110",'') #Montant de la Mensualité (null possible)
-            s20.set("s118",'') #Taux d’intérêt (null possible)
-            s20.set("s120",'') #Date de la constatation de l’impayé (null possible)
-            s20.set("s130",'') #Nombre d’échéances impayées (null possible)
-            s20.set("s126",'') #Intérêts courus 
-            s20.set("s121",'') #Montant de capital non recouvré (null possible)
-            s20.set("s122",'') #Montant des intérêts non recouvrés (null possible)
-            s20.set("s123",'') #Date du rejet (null possible)
-            s20.set("s124",'') #Date d’octroi du crédit (null possible)
-            s20.set("s125",'') #Date d’expiration du crédit (null possible)
+            s20.set("s102",'niveau_responsabilite') #TG001 : Niveau de Responsabilité
+            s20.set("s129",'identifiant_plafond') #Identifiant du Plafond (null possible)
+            s20.set("s128",'numero_contrat') #Numéro du contrat de crédit
+            s20.set("s111",'monnaie') #TG252 : Code monnaies
+            s20.set("s113",'num_identite_bancaire') #Numéro d’identité bancaire (null possible)
+            s20.set("s108",'pays_agence') #TG006 : Code Pays de l'agence
+            s20.set("s114",'code_agence') #Code agence de l’établissement déclarant
+            s20.set("s131",'wilaya_agence') #TG220 : Code Wilaya du bénéficiaire de crédit
+            s20.set("s115",'activite') #TG095 : Code d’activité (null possible)
+            s20.set("s107",'type_credit') #Type de crédit TG004
+            s20.set("s103",'situation') #Situation du débiteur / crédit TG002
+            s20.set("s104",'classe_retard') #TG026 : Classe de retard du crédit
+            s20.set("s105",'duree_initiale') #TG251 : Durée de crédit initiale
+            s20.set("s106",'duree_restante') #TG251 : Durée de crédit restante
+            s20.set("s117",'accorde') #Crédit accordé
+            s20.set("s101",'encours') #Encours hors intérêts courus
+            s20.set("s119",'cout_total') #Coût total du crédit
+            s20.set("s110",'montant_mensualite') #Montant de la Mensualité (null possible)
+            s20.set("s118",'taux_interet') #Taux d’intérêt (null possible)
+            s20.set("s120",'date_impaye') #Date de la constatation de l’impayé (null possible)
+            s20.set("s130",'nb_echeance_impayee') #Nombre d’échéances impayées (null possible)
+            s20.set("s126",'interet_courus') #Intérêts courus 
+            s20.set("s121",'montant_capital_nrecouvre') #Montant de capital non recouvré (null possible)
+            s20.set("s122",'montant_interet_nrecouvre') #Montant des intérêts non recouvrés (null possible)
+            s20.set("s123",'date_rejet') #Date du rejet (null possible)
+            s20.set("s124",'date_octroi') #Date d’octroi du crédit (null possible)
+            s20.set("s125",'date_expiration') #Date d’expiration du crédit (null possible)
             
             s127=ET.SubElement(s20,"s127") #Notation du crédit
-            s127.set("d391",'') #Notation TG224
-            s127.set("d392",'') #Organisme de notation TG212 
-            s127.set("d393",'') #Date de notation
+            s127.set("d391",'code_notation') #Notation TG224
+            s127.set("d392",'organisme_notation') #Organisme de notation TG212 
+            s127.set("d393",'date_notation') #Date de notation
             tree = ET.ElementTree(s127) 
 
             s109=ET.SubElement(s20,"s109") #Liste de garanties
             g=ET.SubElement(s109,"g") #Garantie
-            g.set("g1",'') #TG005 : Types de garanties
-            g.set("g2",'') #Montant de la garantie prise
+            g.set("g1",'type_garantie') #TG005 : Types de garanties
+            g.set("g2",'montant_garantie') #Montant de la garantie prise
             tree = ET.ElementTree(s109)
 
 
             s112=ET.SubElement(s20,"s112") #Liste de Caractéristiques spéciales 
             k=ET.SubElement(s112,"k")
-            k.set("k1",'') #Caractéristique de l’opération TG027
-            k.set("k2",'') #Descriptif de la Caractéristique de l’opération
+            k.set("k1",'operation') #Caractéristique de l’opération TG027
+            k.set("k2",'descriptif_operation') #Descriptif de la Caractéristique de l’opération
             tree = ET.ElementTree(s112)
             
             tree = ET.ElementTree(s20)
