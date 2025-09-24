@@ -1,10 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using CreditDeclaration.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CreditDeclaration.Modals
 {
-    [Table("Personne_Morale_Associe", Schema = "dbo")]
+    [Table("Entreprise_Associe", Schema = "dbo")]
     public class PersonneMoraleAssocie
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id", TypeName = "int")]
+        public int? Id { get; set; }
         [Column("code_agence", TypeName = "int")]
         public int? CodeAgence { get; set; }
 
@@ -43,5 +49,14 @@ namespace CreditDeclaration.Modals
 
         [Column("fonction", TypeName = "int")]
         public int? Fonction { get; set; }
+
+
+        [Column("entreprise_id", TypeName = "int")]
+        public int? Entreprise { get; set; }
+        [ForeignKey("Entreprise")]
+        public PersonneMorale? EntrepriseData { get; set; }
+
+        [Column("date_loading", TypeName = "date")]
+        public DateTime? DateLoading { get; set; }
     }
 }

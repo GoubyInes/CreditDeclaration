@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CreditDeclaration.Models
 {
-    [Table("Entrepreneur_Individuel", Schema = "dbo")]
+    [Table("Entrepreneur", Schema = "dbo")]
     public class EntrepreneurIndividuel
     {
         [Key]
@@ -152,8 +152,8 @@ namespace CreditDeclaration.Models
         [Column("total_bilan", TypeName = "decimal(18,0)")]
         public decimal? TotalBilan { get; set; }
 
-        [Column("effictif", TypeName = "decimal(18,0)")]
-        public decimal? Effictif { get; set; }
+        [Column("effectif", TypeName = "decimal(18,0)")]
+        public decimal? Effectif { get; set; }
 
 
         [Column("code_activite", TypeName = "nvarchar(2)")]
@@ -176,5 +176,8 @@ namespace CreditDeclaration.Models
         public string AdresseActiviteCommune { get; set; }
         [ForeignKey("AdresseActiviteCommune")]
          public Commune? AdresseActiviteCommuneData { get; set; }
+
+        [Column("date_loading", TypeName = "date")]
+        public DateTime? DateLoading { get; set; }
     }
 }

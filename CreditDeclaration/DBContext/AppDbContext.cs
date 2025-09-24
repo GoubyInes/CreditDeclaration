@@ -32,8 +32,13 @@ namespace CreditDeclaration.DBContext
         public DbSet<TypeGarantie> TypeGarantie { get; set; }
         public DbSet<PersonnePhysique> PersonnePhysique { get; set; }
         public DbSet<PersonneMorale> PersonneMorale { get; set; }
+        public DbSet<PersonneMoraleAssocie> PersonneMoraleAssocie { get; set; }
+        public DbSet<PersonneMoraleDirigeant> PersonneMoraleDirigeant { get; set; }
+        public DbSet<PersonneMoraleSociete> PersonneMoraleSociete { get; set; }
+
         public DbSet<Wilaya> Wilaya { get; set; }
         public DbSet<Commune> Commune { get; set; }
+        public DbSet<Credit> Credit { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

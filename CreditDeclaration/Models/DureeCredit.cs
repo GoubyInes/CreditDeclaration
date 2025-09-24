@@ -7,7 +7,7 @@ namespace CreditDeclaration.Models
     public class DureeCredit
     {
         [Key]
-        [Column("code", TypeName = "nvarchar(10)")]
+        [Column("code", TypeName = "nvarchar(3)")]
         public string Code { get; set; }
 
         [Column("domaine", TypeName = "nvarchar(100)")]

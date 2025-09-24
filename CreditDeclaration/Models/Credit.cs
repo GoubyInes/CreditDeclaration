@@ -5,15 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CreditDeclaration.Modals
 {
     [Table("Credit", Schema = "dbo")]
-    public Credit
+    public class Credit
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id", TypeName = "int")]
         public int Id { get; set; }
-        
-        [Column("date_notation", TypeName = "date")]
-        public DateTime? DateNotation { get; set; }
 
         [Column("date_declaration", TypeName = "date")]
         public DateTime? DateDeclaration { get; set; }
@@ -30,10 +27,10 @@ namespace CreditDeclaration.Modals
         [Column("numero_contrat", TypeName = "nvarchar(3)")]
         public string? NumeroContrat { get; set; }
 
-        [Column("monnaie", TypeName = "nvarchar(3)")]
+        [Column("monnaie", TypeName = "nvarchar(10)")]
         public string? Monnaie { get; set; }
         [ForeignKey("Monnaie")]
-        public Monnaie? Monnaie { get; set; }
+        public Monnaie? MonnaieData { get; set; }
 
         [Column("num_identite_bancaire", TypeName = "nvarchar(50)")]
         public string? NumeroIdentiteBancaire { get; set; }
@@ -51,7 +48,7 @@ namespace CreditDeclaration.Modals
         [ForeignKey("WilayaAgence")]
         public Wilaya? WilayaAgenceData { get; set; }
 
-        [Column("activite", TypeName = "nvarchar(3)")]
+        [Column("activite", TypeName = "nvarchar(2)")]
         public string? Activite { get; set; }
         [ForeignKey("Activite")]
         public Activite? ActiviteData { get; set; }
@@ -81,7 +78,7 @@ namespace CreditDeclaration.Modals
         [ForeignKey("DureeRestante")]
         public DureeCredit? DureeRestanteData { get; set; }
 
-        [Column(accorde"", TypeName = "decimal(18,0)")]
+        [Column("accorde", TypeName = "decimal(18,0)")]
         public decimal? CreditAccorde { get; set; }
 
         [Column("encours", TypeName = "decimal(18,0)")]
@@ -145,5 +142,24 @@ namespace CreditDeclaration.Modals
 
         [Column("date_loading", TypeName = "date")]
         public DateTime? DateLoading { get; set; }
+
+
+        [Column("particulier_id", TypeName = "int")]
+        public int? Particulier { get; set; }
+        [ForeignKey("Particulier")]
+        public PersonnePhysique? ParticulierData { get; set; }
+
+
+        [Column("entrepreneur_id", TypeName = "int")]
+        public int? Entrepreneur { get; set; }
+        [ForeignKey("Entrepreneur")]
+        public EntrepreneurIndividuel? EntrepreneurData { get; set; }
+
+
+        [Column("entreprise_id", TypeName = "int")]
+        public int? Entreprise { get; set; }
+        [ForeignKey("Entreprise")]
+        public PersonneMorale? EntrepriseData { get; set; }
+
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CreditDeclaration.Models
 {
-    [Table("Personne_Morale", Schema = "dbo")]
+    [Table("Entreprise", Schema = "dbo")]
     public class PersonneMorale
     {
         [Key]
@@ -115,5 +115,8 @@ namespace CreditDeclaration.Models
 
         [Column("cle_onomastique", TypeName = "varchar(26)")]
         public string? CleOnomastique { get; set; }
+
+        [Column("date_loading", TypeName = "date")]
+        public DateTime? DateLoading { get; set; }
     }
 }

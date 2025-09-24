@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CreditDeclaration.Modals
 {
-    [Table("Personne_Physique", Schema = "dbo")]
+    [Table("Particulier", Schema = "dbo")]
     public class PersonnePhysique
     {
         [Key]
@@ -144,5 +144,8 @@ namespace CreditDeclaration.Modals
 
         [Column("cle_onomastique", TypeName = "nvarchar(26)")]
         public string? CleOnomastique { get; set; }
+
+        [Column("date_loading", TypeName = "date")]
+        public DateTime? DateLoading { get; set; }
     }
 }
