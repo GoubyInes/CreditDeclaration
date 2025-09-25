@@ -34,16 +34,9 @@ type="Particulier"
 
 
 def create_xml():
-        physic_person_list = fetch_personne_physique()
-        physic_person_list = physic_person_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-        
-        if(type=="Particulier"):
-           code="001"
-        if(type=="Entrepreneur"):
-          code="002"
-        if(type=="Entreprise"):
-          code="003"
-
+        credit_list = fetch_credit()
+        credit_list =  credit_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    
         crem=ET.Element("crem")
         crem = ET.SubElement(crem, "crem")
         
@@ -64,14 +57,15 @@ def create_xml():
         c3 = ET.SubElement(c3, "c3")
         c3=ET.SubElement(crem,"c3") 
         
-        for _,row in physic_person_list.iterrows(): 
+        for _,row in credit_list.iterrows(): 
 
           c31=ET.SubElement(c3,"c31")  #Déclaration des débits /Contenu du Fichier DCRE
-          c31.set("s1",'') #Date de la déclaration
+          c31.set("s1",'date_declaration') #Date de la déclaration
           #Information du crédit
           s2=ET.SubElement(c31,"s2")
           d32=ET.SubElement(s2,"d32") #Identification du débiteur
-          d32.text=""
+          d32.text=row['debiteur_id'] 
+          #d32.set("xsi:type","i3")
           tree = ET.ElementTree(32)
 
           s11=ET.SubElement(s2,"s11") #Liste des crédits
@@ -136,11 +130,27 @@ def create_xml():
         tree=ET.ElementTree(crem)
         tree.write(CUR_DIR+"dcre.xml", encoding ='utf-8', xml_declaration = True)
 
-def fetch_personne_physique():
+def fetch_credit():
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Physique")
-    #records = hook.get_records(sql="SELECT * FROM Personne_Physique")
-    #for row in records:#print(row)  
+    records = hook.get_pandas_df(sql="SELECT CASE "+
+                "WHEN c.particulier_id IS NOT NULL AND p.nif IS NOT NULL THEN p.nif "+
+                "WHEN c.particulier_id IS NOT NULL AND p.cle_intermediaire IS NOT NULL THEN p.cle_intermediaire "+
+                "WHEN c.particulier_id IS NOT NULL AND p.cle_onomastique IS NOT NULL THEN p.cle_onomastique "+
+                
+                "WHEN c.entrepreneur_id IS NOT NULL AND e.nif IS NOT NULL THEN e.nif "+
+                "WHEN c.entrepreneur_id IS NOT NULL AND e.cle_intermediaire IS NOT NULL THEN e.cle_intermediaire "+
+                "WHEN c.entrepreneur_id IS NOT NULL AND e.cle_onomastique IS NOT NULL THEN e.cle_onomastique "+
+                
+                "WHEN c.entreprise_id IS NOT NULL AND r.nif IS NOT NULL THEN r.nif  "+
+                "WHEN c.entreprise_id IS NOT NULL AND r.cle_intermediaire IS NOT NULL THEN r.cle_intermediaire "+
+                "WHEN c.entreprise_id IS NOT NULL AND r.cle_onomastique IS NOT NULL THEN r.cle_onomastique "+
+                
+                "WHEN c.entreprise_id IS NOT NULL AND r.cle_onomastique IS NOT NULL THEN r.cle_onomastique "+
+            "END AS debiteur_id,c.* "+
+        "FROM Credit c "+
+        "LEFT JOIN Particulier p ON p.id = c.particulier_id "+
+        "LEFT JOIN Entrepreneur e ON e.id = c.entrepreneur_id "+
+        "LEFT JOIN Entreprise r ON r.id = c.entreprise_id")
     return records
 
 

@@ -34,14 +34,18 @@ type="Particulier"
 
 
 def create_xml():
-        physic_person_list = fetch_personne_physique()
-        moral_person_list = fetch_personne_morale()
-        individual_entrepronor_list = fetch_entrepreneur_individuel()
+        particulier_list = fetch_particulier()
+        entreprise_list = fetch_entreprise()
+        entrepreneur_list = fetch_entrepreneur()
 
-        physic_person_list = physic_person_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+      
+        particulier_list = particulier_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        entrepreneur_list = entrepreneur_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        entreprise_list = entreprise_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        
         
         if(type=="Particulier"):
-           code="001"
+          code="001"
         if(type=="Entrepreneur"):
           code="002"
         if(type=="Entreprise"):
@@ -66,7 +70,7 @@ def create_xml():
         c3 = ET.SubElement(c3, "c3")
         c3=ET.SubElement(crem,"c3") 
         
-        for _,row in physic_person_list.iterrows(): 
+        for _,row in particulier_list.iterrows(): 
 
           c32=ET.SubElement(c3,"c32")  #Déclaration des débits /Contenu du Fichier DDEB
           d1=ET.SubElement(c32,"d1")  
@@ -76,17 +80,12 @@ def create_xml():
           # Nom du débiteur / Désignation Sociale
           if(code=='001') : 
             d1.set('d34',row['nom']) 
-          elif (code=='002'): 
+          elif (code=='003'): 
              d1.set('d34',row['sigle']) 
 
           # Changement de clé / Changement des débiteurs type U
-          if(code=='001'):
-            d1.set('d38',row['nom']+' '+row['prenom']) 
-          if(code=='002'):
-            d1.set('d38',row['designation'])
-          if(code=='003'):
-            d1.set('d38',row['sigle']) 
-
+          # d1.set('d38','') 
+          
           d1.set('xsi:type',"I") #I: Déclaration d’un nouveau débiteur, U: Déclaration corréctive
           tree = ET.ElementTree(d1)
 
@@ -109,7 +108,10 @@ def create_xml():
           e.set("e2",row['num_doc']) #Numéro du document
           e.set("e3",str(row['pays_emission'])) #Pays d’émission TG006
           e.set("e4",row['entite_emettrice']) #Entité émettrice
-          e.set("e5",row['date_expiration'].strftime('%Y-%m-%d')) #Date d’expiration
+          if row['date_naissance'] is None:
+            e.set("e5","")
+          else:
+            e.set("e5",row['date_naissance'].strftime('%Y-%m-%d')) #Date d’expiration
           tree = ET.ElementTree(d37)
 
        
@@ -123,7 +125,10 @@ def create_xml():
              
           #Description d’élément [d36] du type  [t1]: Particulier 
           if(code!="003"):
-            d36.set("t11", row['date_naissance'].strftime('%Y-%m-%d')) #Date naissance
+            if row['date_naissance'] is None:
+               d36.set("t11","")
+            else:
+              d36.set("t11", row['date_naissance'].strftime('%Y-%m-%d')) #Date naissance
             d36.set("t12", row['prenom']) #Prenom
             d36.set("t13", row['nom']) #Nom
             d36.set("t14", str(row['num_acte_naissance'])) #Num acte de naissance
@@ -140,18 +145,21 @@ def create_xml():
             d36.set("t25", str(row['revenu'])) #Revenu
             d36.set("t29", str(row['nationalite'])) #nationalité 1 ou 0
 
-          #[t2]:t1 + Entrepreneur individuel
+          #[t2]:t1 + Entrepreneur 
           if(code=="002"):
             d36.set("t27", str(row['fond_propre'])) #Fonds propre
             d36.set("t28", str(row['recette'])) #Recette
-            d36.set("t303", row['adress_activite']) #Adresse activité
+            d36.set("t303", row['adresse_activite']) #Adresse activité
             d36.set("t305", str(row['code_activite'])) #Code activité TG095
             d36.set("t307", str(row['effectif'])) #Effectif 
             d36.set("t311", str(row['total_bilan'])) #Bilan
 
           #Description d’élément [d36] du type [t3]: Entreprise
           if(code=="003"):
-            d36.set("t11", row['date_creation'].strftime('%Y-%m-%d')) #Date creation
+            if row['date_creation'] is None:
+               d36.set("t11","")
+            else:
+              d36.set("t11", row['date_creation'].strftime('%Y-%m-%d')) #Date creation
             d36.set("t301", row['sigle']) #Sigle
             d36.set("t304", str(row['forme_juridique'])) #Forme juridique TG213
             d36.set("t305", str(row['code_activite_principale'])) #Activité principale
@@ -161,7 +169,12 @@ def create_xml():
             d36.set("t309", str(row['chiffre_affaire'])) #Chiffre d'affaire
             d36.set("t310", str(row['resultat_net'])) #Résultat net
             d36.set("t311", str(row['total_bilan'])) #Total bilan
-            d36.set("t312", row['date_bilan'].strftime('%Y-%m-%d')) #Date bilan
+
+            if row['date_bilan'] is None:
+               d36.set("t312","")
+            else:
+              d36.set("t312", row['date_bilan'].strftime('%Y-%m-%d')) #Date bilan
+
             d36.set("t313", str(row['total_actif'])) #Total actifs non courants
             d36.set("t314", str(row['capital_emis'])) #Capital émis
             d36.set("t315", str(row['reserve'])) #Réserves
@@ -182,7 +195,7 @@ def create_xml():
             tree = ET.ElementTree(t26)
 
           #suite t3
-          if(type=="003"):
+          if(code=="003"):
             t302=ET.SubElement(c32,"t302") #Adresse activité t3
             t302.set("m1",row['adresse_activite'])  
             t302.set("m2",str(row['wilaya_activite']))#TG220
@@ -196,14 +209,17 @@ def create_xml():
             tree = ET.ElementTree(t303)
 
           
-          if(code!="003"): #PersonneMoraleAssocie
-            moral_person_associe_list= fetch_personne_morale_associe(row['client_radical'])
+          if(code!="003"): #Entreprise Associe
+            entreprise_associe_list= fetch_entreprise_associe(row['client_radical'])
             t322=ET.SubElement(c32,"t322") #Liste de Groupe 
-            for _,rowAss in moral_person_associe_list.iterrows(): 
+            for _,rowAss in entreprise_associe_list.iterrows(): 
               g3=ET.SubElement(t322,"g3")
               g3.set("e41",rowAss['nif']) #NIF de l’entreprise
               g3.set("e42",str(rowAss['pourcentage_participation'])) #Pourcentage de participation
-              g3.set("e43",rowAss['date_pourcentage'].strftime('%Y-%m-%d')) #Date de participation
+              if rowAss['date_pourcentage_'] is None:
+                g3.set("e43","")
+              else:
+                g3.set("e43", rowAss['date_pourcentage'].strftime('%Y-%m-%d')) #Date poutcentage
               g3.set("e44",rowAss['designation_social']) #Désignation Sociale
               g3.set("e45",str(rowAss['code_activite'])) #Code d’Activité TG095
               g3.set("e46",str(rowAss['forme_juridique'])) #Forme Juridique TG213
@@ -211,29 +227,36 @@ def create_xml():
             tree = ET.ElementTree(t322)
           
          
-            #PersonneMoraleSociete
-            moral_person_societe_list= fetch_personne_morale_associe(row['client_radical'])
+            #Entreprise Societe
+            entreprise_societe_list= fetch_entreprise_associe(row['client_radical'])
             t323=ET.SubElement(c32,"t323") #Liste des associés de la société mère 
-            for _,rowSoc in moral_person_societe_list.iterrows(): 
+            for _,rowSoc in entreprise_societe_list.iterrows(): 
               h1=ET.SubElement(t323,"h1")
               h1.set("h11",str(rowSoc['type_personne'])) #Type de personne TG048
               h1.set("h20",str(rowSoc['indicateur_etat'])) #Indicateur de l’État
               h1.set("h12",rowSoc['designation_social']) #Nom / Désignation
               h1.set("h19",rowSoc['sigle']) #Prénom   /  Sigle
-              h1.set("h13",rowSoc['date_creation']).strftime('%Y-%m-%d') #Date de naissance / création
+              if row['date_naissance']  is None:
+                h1.set("h13","")
+              else:
+                h1.set("h13", row['date_naissance'].strftime('%Y-%m-%d')) #Date naissance
+
               h1.set("h14",str(rowSoc['pays_residence'])) #Pays de Résidence TG006
               h1.set("h15",str(rowSoc['num_sequentiel'])) #Identifiant unique
               h1.set("h16",str(rowSoc['pourcentage_participation'])) #Pourcentage détenu
-              h1.set("h17",rowSoc['date_pourcentage'].strftime('%Y-%m-%d')) #Date de prise de participation
+              if rowSoc['date_pourcentage'] is None:
+                h1.set("h17","")
+              else:
+                h1.set("h17", rowSoc['date_pourcentage'].strftime('%Y-%m-%d')) #Date de prise de participation
               h1.set("h18",str(rowSoc['fonction'])) #Fonction TG215
               tree = ET.ElementTree(h1)
             tree = ET.ElementTree(t323)
 
          
-            #PersonneMoraleDirigeant
-            moral_person_dirigeant_list= fetch_personne_morale_dirigeant(row['client_radical'])
+            #Entreprise Dirigeant
+            entreprise_dirigeant_list= fetch_entreprise_dirigeant(row['client_radical'])
             t324=ET.SubElement(c32,"t324")
-            for _,rowDir in moral_person_dirigeant_list.iterrows(): 
+            for _,rowDir in entreprise_dirigeant_list.iterrows(): 
              j1=ET.SubElement(t324,"j1")
              j1.set("j11",rowDir['identification']) #Identifiant unique
              j1.set("j12",rowDir['nom']) #Nom
@@ -258,41 +281,41 @@ def create_xml():
         # write the tree into an XML file
         tree.write(CUR_DIR+"ddeb.xml", encoding ='utf-8', xml_declaration = True)
 
-def fetch_personne_physique():
+def fetch_particulier():
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Physique")
+    records = hook.get_pandas_df(sql="SELECT * FROM Particulier")
     #records = hook.get_records(sql="SELECT * FROM Personne_Physique")
     #for row in records:#print(row)  
     return records
 
-def fetch_entrepreneur_individuel():
+def fetch_entrepreneur():
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Entrepreneur_Individuel") 
+    records = hook.get_pandas_df(sql="SELECT * FROM Entrepreneur") 
     return records
 
-def fetch_personne_morale():
+def fetch_entreprise():
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Morale") 
+    records = hook.get_pandas_df(sql="SELECT * FROM Entreprise") 
     return records
 
-def fetch_personne_morale_associe(id):
+def fetch_entreprise_associe(id):
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Morale where client_radical= %s",parameters=(id)) # _Associe
+    records = hook.get_pandas_df(sql="SELECT * FROM Entreprise where client_radical= %s",parameters=(id)) # _Associe
     return records
 
-def fetch_personne_morale_dirigeant(id):
+def fetch_entreprise_dirigeant(id):
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Morale where client_radical=%s",parameters=(id)) #_Dirigeant
+    records = hook.get_pandas_df(sql="SELECT * FROM Entreprise where client_radical=%s",parameters=(id)) #_Dirigeant
     return records
 
-def fetch_personne_morale_societe(id):
+def fetch_entreprise_societe(id):
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT * FROM Personne_Morale where client_radical=%s",parameters=(id)) #_Societe 
+    records = hook.get_pandas_df(sql="SELECT * FROM Entreprise where client_radical=%s",parameters=(id)) #_Societe 
     return records
 
-get_Personne_Physqiue = PythonOperator(
-        task_id="get_personne_physique",
-        python_callable=fetch_personne_physique,
+get_Particulier = PythonOperator(
+        task_id="get_entrepreneur",
+        python_callable=fetch_particulier,
         dag=dag
     )
 
@@ -303,7 +326,7 @@ deb_xmlFile = PythonOperator(
     dag=dag,
 )
 
-get_Personne_Physqiue 
+get_Particulier 
 
 #<crem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" c1="1.0">
 #<c2 c21="032" c22="032" c23="2024-07-08T14:55:01" c24="20240708174" c25="111"/>
