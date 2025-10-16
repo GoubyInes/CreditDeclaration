@@ -12,6 +12,7 @@ except ImportError:
 from airflow.hooks.base import BaseHook
 import pyodbc
 from airflow.utils.log.logging_mixin import LoggingMixin
+from collections import defaultdict
 
 
 CUR_DIR = '/opt/airflow/dags/data/'
@@ -29,14 +30,20 @@ dag=DAG(
 )
 
 current_time=datetime.now()
-code=''
-type="Particulier" 
-
 
 def create_xml():
         credit_list = fetch_credit()
         credit_list =  credit_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-    
+
+        grouped = defaultdict(list)
+
+        for row in credit_list.iterrows():
+            key = row[0]                      
+            grouped[key].append(row)
+
+        result = dict(grouped)
+        print(grouped)
+
         crem=ET.Element("crem")
         crem = ET.SubElement(crem, "crem")
         
@@ -57,21 +64,21 @@ def create_xml():
         c3 = ET.SubElement(c3, "c3")
         c3=ET.SubElement(crem,"c3") 
         
-        for _,row in credit_list.iterrows(): 
+        for key, credits in grouped.items: 
 
           c31=ET.SubElement(c3,"c31")  #Déclaration des débits /Contenu du Fichier DCRE
-          c31.set("s1",'date_declaration') #Date de la déclaration
+          #c31.set("s1",str(row.get("date_declaration") or "")) #Date de la déclaration
           #Information du crédit
           s2=ET.SubElement(c31,"s2")
           d32=ET.SubElement(s2,"d32") #Identification du débiteur
-          d32.text=row['debiteur_id'] 
+          d32.text=key #row['debiteur_id'] 
           #d32.set("xsi:type","i3")
           tree = ET.ElementTree(32)
-
+          
           s11=ET.SubElement(s2,"s11") #Liste des crédits
-          for i in [0,1]:
+          for row in credits:
             s20=ET.SubElement(s11,"s20") 
-            s20.set("s102",'niveau_responsabilite') #TG001 : Niveau de Responsabilité
+            s20.set("s102",row['niveau_responsabilite']) #TG001 : Niveau de Responsabilité
             s20.set("s129",'identifiant_plafond') #Identifiant du Plafond (null possible)
             s20.set("s128",'numero_contrat') #Numéro du contrat de crédit
             s20.set("s111",'monnaie') #TG252 : Code monnaies
@@ -132,7 +139,7 @@ def create_xml():
 
 def fetch_credit():
     hook = MsSqlHook(mssql_conn_id='sqlserver')
-    records = hook.get_pandas_df(sql="SELECT CASE "+
+    records = hook.get_pandas_df(sql="SELECT COALESCE(p.client_radical, e.client_radical, r.client_radical) AS client_radical, CASE "+
                 "WHEN c.particulier_id IS NOT NULL AND p.nif IS NOT NULL THEN p.nif "+
                 "WHEN c.particulier_id IS NOT NULL AND p.cle_intermediaire IS NOT NULL THEN p.cle_intermediaire "+
                 "WHEN c.particulier_id IS NOT NULL AND p.cle_onomastique IS NOT NULL THEN p.cle_onomastique "+
@@ -150,7 +157,7 @@ def fetch_credit():
         "FROM Credit c "+
         "LEFT JOIN Particulier p ON p.id = c.particulier_id "+
         "LEFT JOIN Entrepreneur e ON e.id = c.entrepreneur_id "+
-        "LEFT JOIN Entreprise r ON r.id = c.entreprise_id")
+        "LEFT JOIN Entreprise r ON r.id = c.entreprise_id ORDER BY debiteur_id")
     return records
 
 
